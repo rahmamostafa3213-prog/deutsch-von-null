@@ -1,0 +1,286 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ألماني من الصفر</title>
+<style>
+:root{--bg:#f4f7f6;--card:#fff;--tx:#12302e;--mu:#6b8280;--pr:#0f9d8a;--pr2:#0b7a6b;--ac:#ffb020;--ok:#1fa65a;--bad:#e5484d;--bd:#dfe9e7;--vio:#7c5cd6}
+.dark{--bg:#0e1a19;--card:#172a28;--tx:#e8f3f1;--mu:#8fa9a5;--bd:#26403d}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,"Noto Sans Arabic",Roboto,sans-serif;font-size:16px}
+#app{max-width:560px;margin:0 auto;padding:16px 16px 96px;min-height:100vh}
+h1{font-size:22px;margin:4px 0 12px}h2{font-size:18px;margin:16px 0 8px}
+.top{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-bottom:12px}
+.chip{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:6px 12px;font-weight:700;font-size:14px}
+.hero{background:linear-gradient(135deg,var(--pr),var(--pr2));color:#fff;border-radius:22px;padding:18px;margin-bottom:14px}
+.hero b{font-size:20px}.bar{height:10px;border-radius:6px;background:rgba(255,255,255,.3);overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;background:var(--ac)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:14px;margin-bottom:10px}
+.unit{display:flex;gap:12px;align-items:center;cursor:pointer}.unit .ic{font-size:30px;width:52px;height:52px;border-radius:16px;background:var(--bg);display:grid;place-items:center}
+.unit .m{flex:1}.unit small{color:var(--mu)}.stars{letter-spacing:2px;color:var(--ac)}
+.lock{opacity:.5}
+button{font:inherit;border:0;border-radius:14px;padding:13px 16px;font-weight:700;cursor:pointer}
+.btn{background:var(--pr);color:#fff;width:100%}.btn:active{background:var(--pr2)}.btn2{background:var(--card);color:var(--tx);border:1px solid var(--bd);width:100%}
+.opt{display:block;width:100%;text-align:center;background:var(--card);color:var(--tx);border:2px solid var(--bd);margin:8px 0;font-size:18px}
+.opt.ok{border-color:var(--ok);background:rgba(31,166,90,.15)}.opt.bad{border-color:var(--bad);background:rgba(229,72,77,.15)}
+.de{direction:ltr;unicode-bidi:isolate;font-weight:700}
+.q{text-align:center;font-size:26px;margin:24px 0}.q .de{font-size:30px}
+.flip{perspective:900px;height:200px;margin:14px 0}.flip>div{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}
+.flip.f>div{transform:rotateY(180deg)}.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:30px;padding:10px;text-align:center}
+.front{background:var(--card);border:2px solid var(--pr)}.back{background:var(--pr);color:#fff;transform:rotateY(180deg)}
+.hint{font-size:14px;opacity:.8;margin-top:6px}
+nav{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--bd);display:flex;z-index:5}
+nav button{background:none;color:var(--mu);flex:1;font-size:12px;padding:6px}nav button span{display:block;font-size:22px}nav .on{color:var(--pr)}
+.prog{height:8px;background:var(--bd);border-radius:5px;overflow:hidden;margin:8px 0}.prog i{display:block;height:100%;background:var(--pr)}
+.words{display:flex;flex-wrap:wrap;gap:8px;direction:ltr;justify-content:center;margin:12px 0}.words button{background:var(--card);color:var(--tx);border:2px solid var(--bd);padding:10px 14px}
+.slot{min-height:56px;border-bottom:2px dashed var(--bd);direction:ltr;display:flex;flex-wrap:wrap;gap:8px;padding:6px 0;margin:10px 0}
+.sp{background:none;font-size:24px;padding:4px 10px;color:var(--pr)}
+.row{display:flex;gap:10px}.row>*{flex:1}
+.good{color:var(--ok)}.badc{color:var(--bad)}.center{text-align:center}
+.msg{padding:12px;border-radius:14px;margin:10px 0;font-weight:700}.msg.ok{background:rgba(31,166,90,.15);color:var(--ok)}.msg.bad{background:rgba(229,72,77,.15);color:var(--bad)}
+.big{font-size:56px;text-align:center}
+.lvl{background:linear-gradient(135deg,var(--vio),#a78bfa);color:#fff;border-radius:22px;padding:16px;margin-bottom:14px}
+.dlg{display:flex;gap:8px;margin:10px 0;align-items:flex-start}.dlg .av{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:700;flex-shrink:0;font-size:14px}
+.dlg .bub{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:10px 12px;flex:1}
+.dlg.me .av{background:var(--pr);color:#fff}.dlg.ot .av{background:var(--vio);color:#fff}
+.bub .de{display:block;font-size:17px}.bub small{color:var(--mu)}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;direction:ltr;margin:12px 0}
+.mgrid button{padding:16px 8px;font-size:16px;background:var(--card);color:var(--tx);border:2px solid var(--bd)}
+.mgrid button.sel{border-color:var(--vio);background:rgba(124,92,214,.12)}
+.mgrid button.hit{border-color:var(--ok);background:rgba(31,166,90,.15);opacity:.55;pointer-events:none}
+.mgrid button.miss{border-color:var(--bad);background:rgba(229,72,77,.15)}
+table.conj{width:100%;border-collapse:collapse;direction:ltr}table.conj td,table.conj th{border:1px solid var(--bd);padding:8px;text-align:center}
+table.conj th{background:var(--bg)}
+input.srch{width:100%;font:inherit;padding:13px 16px;border-radius:14px;border:2px solid var(--bd);background:var(--card);color:var(--tx);margin-bottom:10px}
+.tag{display:inline-block;background:rgba(15,157,138,.12);color:var(--pr);border-radius:10px;padding:2px 10px;font-size:12px;font-weight:700;margin-inline-start:6px}
+canvas.chart{width:100%;border-radius:14px;background:var(--card);border:1px solid var(--bd)}
+.toolcard{display:flex;gap:12px;align-items:center;cursor:pointer}
+.toolcard .ic{font-size:26px;width:46px;height:46px;border-radius:14px;background:var(--bg);display:grid;place-items:center}
+.certwrap canvas{width:100%;border-radius:14px;border:1px solid var(--bd)}
+</style></head><body><div id="app"></div>
+<nav id="nav"></nav>
+<script src="data.js"></script>
+<script src="data2.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+const DEF={xp:0,streak:0,last:'',done:{},srs:{},today:{d:'',xp:0},dark:false,goal:30,hist:{},wrong:{},name:'',placed:false};
+const L=Object.assign({},DEF,JSON.parse(localStorage.getItem('de_state')||'{}'));
+const save=()=>localStorage.setItem('de_state',JSON.stringify(L));
+const day=()=>{const d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()};
+const ONE=864e5;
+if(L.dark)document.body.classList.add('dark');
+const UNITS_ALL=UNITS.concat(UNITS2);
+function speak(t){t=t.replace(/\.\.\./g,'');try{if(window.Android)Android.speak(t);else{const u=new SpeechSynthesisUtterance(t);u.lang='de-DE';u.rate=.85;speechSynthesis.cancel();speechSynthesis.speak(u)}}catch(e){}}
+function addXP(n){const d=day();if(L.today.d!==d)L.today={d,xp:0};L.today.xp+=n;L.xp+=n;L.hist[d]=(L.hist[d]||0)+n;
+ const ks=Object.keys(L.hist);if(ks.length>90)ks.sort().slice(0,ks.length-90).forEach(k=>delete L.hist[k]);
+ if(L.last!==d){const y=new Date(Date.now()-ONE);const yd=y.getFullYear()+'-'+(y.getMonth()+1)+'-'+y.getDate();L.streak=(L.last===yd)?L.streak+1:1;L.last=d}save()}
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const ALLW=UNITS_ALL.flatMap(u=>u.w.map(w=>({de:w[0],ar:w[1],u:u.id})));
+const unlocked=u=>u===1||L.done[u-1]!==undefined;
+let tab='home',stack=null;
+function nav(){$('#nav').innerHTML=[['home','🏠','الرئيسية'],['rev','🔁','مراجعة'],['talk','💬','محادثات'],['tools','📚','أدوات'],['me','👤','أنا']].map(([k,i,t])=>`<button class="${tab===k&&!stack?'on':''}" onclick="go('${k}')"><span>${i}</span>${t}</button>`).join('')}
+function go(k){tab=k;stack=null;render()}
+window.appBack=function(){if(stack){stack=null;render();return true}if(tab!=='home'){tab='home';render();return true}return false};
+function render(){nav();window.scrollTo(0,0);
+ if(stack)return stack();
+ ({home,rev:reviewHome,talk:talkHome,tools:toolsHome,me})[tab]()}
+function topbar(){const d=day();const t=L.today.d===d?L.today.xp:0;return `<div class="top"><span class="chip">🔥 ${L.streak} يوم</span><span class="chip">⭐ ${L.xp} نقطة</span><span class="chip">🎯 ${Math.min(t,L.goal)}/${L.goal}</span></div>`}
+const escQ=s=>s.replace(/'/g,"\\'");
+function sectionList(list){return list.map(u=>{const s=L.done[u.id];const ok=unlocked(u.id);
+ return `<div class="card unit ${ok?'':'lock'}" onclick="${ok?`openUnit(${u.id})`:`alert('خلصي الوحدة اللي قبلها الأول 🔒')`}"><div class="ic">${u.icon}</div><div class="m"><b>${u.id}. ${u.t}</b><br><small>${u.w.length} كلمة · ${u.p.length} جمل</small></div><div class="stars">${s===undefined?(ok?'▶':'🔒'):'★'.repeat(s)+'☆'.repeat(3-s)}</div></div>`}).join('')}
+function home(){const dn=Object.keys(L.done).length;
+ $('#app').innerHTML=topbar()+`<div class="hero"><b>أهلاً${L.name?' يا '+L.name:''}! Hallo 👋</b><div>أكملتي ${dn} من ${UNITS_ALL.length} وحدة. كمّلي بنفس الحماس.</div><div class="bar"><i style="width:${dn/UNITS_ALL.length*100}%"></i></div></div>`+
+ (L.placed?'':`<div class="card unit" onclick="placement()" style="border:2px solid var(--vio)"><div class="ic">🎯</div><div class="m"><b>اختبار تحديد المستوى</b><br><small>لو عندك أساس، خدي الاختبار وافتحي الوحدات على مستواك بدل ما تبدئي من الصفر</small></div><span style="font-size:22px">▶</span></div>`)+
+ `<h2>المستوى الأول A1 — الأساس</h2>`+sectionList(UNITS)+`<h2>المستوى التاني A2 — التقدم</h2>`+sectionList(UNITS2)}
+function openUnit(id){const u=UNITS_ALL.find(x=>x.id===id);let i=0;
+ stack=()=>{const w=u.w[i];$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>${u.icon} ${u.t}</b><span class="chip">${i+1}/${u.w.length}</span></div>
+ <div class="prog"><i style="width:${(i+1)/u.w.length*100}%"></i></div>
+ <div class="flip" id="fl" onclick="this.classList.toggle('f')"><div><div class="face front"><span class="de">${w[0]}</span><span class="hint">اضغطي لمعرفة المعنى</span></div><div class="face back">${w[1]}</div></div></div>
+ <div class="center"><button class="sp" style="font-size:40px" onclick="speak('${escQ(w[0])}')">🔊</button></div>
+ <div class="row"><button class="btn2" ${i?'':'disabled'} onclick="nx(-1)">السابق</button><button class="btn" onclick="nx(1)">${i<u.w.length-1?'التالي':'ابدأ التمرين'}</button></div>
+ <div class="row" style="margin-top:10px"><button class="btn2" onclick="listenUnit(${u.id})">🎧 وضع الاستماع</button><button class="btn2" onclick="matchGame(${u.id})">🧩 لعبة التوصيل</button></div>
+ <div class="card" style="margin-top:16px"><b>💡 نصيحة</b><p style="margin:6px 0 0">${u.g}</p></div>`;setTimeout(()=>speak(w[0]),200)};
+ window.nx=d=>{if(i+d>=u.w.length){return quiz(u)}i=Math.max(0,i+d);render()};render()}
+let LISTEN_STOP=false;
+function listenUnit(id){const u=UNITS_ALL.find(x=>x.id===id);LISTEN_STOP=false;let i=0;const items=[...u.w.map(w=>[w[0],w[1],'كلمة']),...u.p.map(p=>[p[0],p[1],'جملة'])];
+ stack=()=>{const it=items[i];$('#app').innerHTML=`<div class="top"><button class="sp" onclick="LISTEN_STOP=true;appBack()">→</button><b>🎧 ${u.t}</b><span class="chip">${i+1}/${items.length}</span></div>
+ <div class="prog"><i style="width:${(i+1)/items.length*100}%"></i></div>
+ <div class="card center" style="padding:36px 16px"><span class="tag">${it[2]}</span><div class="de" style="font-size:28px;margin:14px 0">${it[0]}</div><div style="color:var(--mu)">${it[1]}</div>
+ <div style="margin-top:14px"><button class="sp" style="font-size:38px" onclick="speak('${escQ(it[0])}')">🔊</button></div></div>
+ <button class="btn2" onclick="LISTEN_STOP=true;appBack()">إيقاف الاستماع</button>`;
+ speak(it[0]);if(!LISTEN_STOP)setTimeout(()=>{if(!LISTEN_STOP&&stack){i=(i+1)%items.length;render()}},3200)};render()}
+function matchGame(id){const u=UNITS_ALL.find(x=>x.id===id);const ws=shuffle(u.w).slice(0,6);const cards=shuffle(ws.flatMap((w,k)=>[{t:w[0],k,l:'de'},{t:w[1],k,l:'ar'}]));
+ let first=null,moves=0,hits=0,lock=false;
+ const draw=()=>{$('#mg').innerHTML=cards.map((c,j)=>c.done?`<button class="hit">${c.t}</button>`:`<button class="${first===j?'sel':''}" onclick="mtap(${j})">${c.t}</button>`).join('')};
+ window.mtap=j=>{if(lock||cards[j].done||first===j)return;
+  if(first===null){first=j;draw();return}
+  const a=cards[first],b=cards[j];moves++;
+  if(a.k===b.k){a.done=b.done=true;hits++;first=null;draw();
+   if(hits===6){addXP(20);$('#mres').innerHTML=`<div class="msg ok">برافو! خلصتي في ${moves} محاولة وحصلتي على 20 نقطة 🎉</div><button class="btn" onclick="appBack()">تمام</button>`}}
+  else{lock=true;draw();document.querySelectorAll('#mg button')[j].classList.add('miss');document.querySelectorAll('#mg button')[first].classList.add('miss');
+   setTimeout(()=>{first=null;lock=false;draw()},700)}};
+ stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>🧩 توصيل: ${u.t}</b><span class="chip" id="mmoves"></span></div>
+ <p style="color:var(--mu)">وصّلي كل كلمة ألمانية بمعناها.</p><div class="mgrid" id="mg"></div><div id="mres"></div>`;draw()};render()}
+function mkBlank(u){const out=[];(u.p||[]).forEach(p=>{const tokens=p[0].split(' ');const hit=u.w.find(w=>{const bare=w[0].replace(/^(der|die|das)\s+/,'');return tokens.some(t=>t.replace(/[.,!?]$/,'')===bare&&bare.length>3)});
+ if(!hit)return;const bare=hit[0].replace(/^(der|die|das)\s+/,'');const idx=tokens.findIndex(t=>t.replace(/[.,!?]$/,'')===bare);
+ const shown=tokens.map((t,k)=>k===idx?'_____':t).join(' ');const others=shuffle(u.w.filter(w=>w!==hit)).slice(0,3).map(w=>w[0].replace(/^(der|die|das)\s+/,''));
+ out.push({type:'blank',sentence:shown,ar:p[1],ans:bare,opts:shuffle([bare,...others])})});return out}
+function mkQ(u,wordsFor,phr){const qs=[];const ws=shuffle(wordsFor);
+ ws.forEach((w,k)=>{const type=['de2ar','ar2de','listen'][k%3];const others=shuffle(ALLW.filter(x=>x.de!==w.de)).slice(0,3);
+  const opts=shuffle([w,...others]);qs.push({type,w,opts})});
+ if(u)qs.push(...mkBlank(u));
+ shuffle(phr||[]).slice(0,3).forEach(p=>qs.push({type:'build',p}));
+ return shuffle(qs).slice(0,14)}
+function runQ(qs,title,onEnd){let i=0,ok=0,locked=false;
+ const step=()=>{if(i>=qs.length)return onEnd(ok,qs.length);const q=qs[i];locked=false;
+ let body='';
+ if(q.type==='build'){const words=q.p[0].split(' ');q.sel=[];q.pool=shuffle(words.map((w,k)=>({w,k})));
+  body=`<div class="q">ترجمي:<br><b>${q.p[1]}</b></div><div class="slot" id="sl"></div><div class="words" id="wd"></div><button class="btn" onclick="chk()">تأكيد</button><div id="fb"></div>`}
+ else if(q.type==='blank'){body=`<div class="q">اختاري الكلمة الناقصة:<br><span class="de" style="font-size:24px">${q.sentence}</span><br><b>${q.ar}</b></div>`+q.opts.map((o,k)=>`<button class="opt de" onclick="pickB(${k})">${o}</button>`).join('')+`<div id="fb"></div>`}
+ else{const t=q.type;const prompt=t==='de2ar'?`<div class="q">ما معنى<br><span class="de">${q.w.de}</span> <button class="sp" onclick="speak('${escQ(q.w.de)}')">🔊</button></div>`:t==='ar2de'?`<div class="q">إزاي تقولي<br><b>${q.w.ar}</b></div>`:`<div class="q">اسمعي واختاري المعنى<br><button class="sp" style="font-size:52px" onclick="speak('${escQ(q.w.de)}')">🔊</button></div>`;
+  body=prompt+q.opts.map((o,k)=>`<button class="opt ${t==='ar2de'?'de':''}" onclick="pick(${k})">${t==='ar2de'?o.de:o.ar}</button>`).join('')+`<div id="fb"></div>`}
+ $('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">✕</button><b>${title}</b><span class="chip">${i+1}/${qs.length}</span></div><div class="prog"><i style="width:${i/qs.length*100}%"></i></div>`+body;
+ if(q.type==='build')drawB(q);
+ if(q.type==='listen')setTimeout(()=>speak(q.w.de),250)};
+ const fin=(good,msg,word)=>{locked=true;if(good)ok++;const q=qs[i];const w=word||q.w;if(w){srsMark(w,good);if(!good){L.wrong[w.de]=(L.wrong[w.de]||0)+1}else if(L.wrong[w.de]){L.wrong[w.de]=Math.max(0,L.wrong[w.de]-1)}save()}
+  $('#fb').innerHTML=`<div class="msg ${good?'ok':'bad'}">${good?'صح! ✅':'غلط ❌'} ${msg||''}</div><button class="btn" onclick="nq()">${i<qs.length-1?'التالي':'النتيجة'}</button>`;if(good)speak(w?w.de:(q.p?q.p[0]:''))};
+ window.nq=()=>{i++;step()};
+ window.pick=k=>{if(locked)return;const q=qs[i];const o=q.opts[k];const good=o.de===q.w.de;
+  document.querySelectorAll('.opt').forEach((b,j)=>{if(q.opts[j].de===q.w.de)b.classList.add('ok');else if(j===k)b.classList.add('bad')});
+  fin(good,good?'':`الصح: ${q.w.de} = ${q.w.ar}`)};
+ window.pickB=k=>{if(locked)return;const q=qs[i];const good=q.opts[k]===q.ans;
+  document.querySelectorAll('.opt').forEach((b,j)=>{if(q.opts[j]===q.ans)b.classList.add('ok');else if(j===k)b.classList.add('bad')});
+  fin(good,good?'':`الصح: ${q.ans}`)};
+ window.drawB=q=>{$('#sl').innerHTML=q.sel.map(o=>`<button class="opt" style="width:auto;margin:0" onclick="unb(${o.k})">${o.w}</button>`).join('');
+  $('#wd').innerHTML=q.pool.filter(o=>!q.sel.includes(o)).map(o=>`<button onclick="sel(${o.k})">${o.w}</button>`).join('')};
+ window.sel=k=>{if(locked)return;const q=qs[i];q.sel.push(q.pool.find(o=>o.k===k));drawB(q)};
+ window.unb=k=>{if(locked)return;const q=qs[i];q.sel=q.sel.filter(o=>o.k!==k);drawB(q)};
+ window.chk=()=>{if(locked)return;const q=qs[i];const a=q.sel.map(o=>o.w).join(' ');fin(a===q.p[0],a===q.p[0]?'':'الصح: '+q.p[0])};
+ step()}
+function quiz(u){const qs=mkQ(u,u.w.map(w=>({de:w[0],ar:w[1]})),u.p);
+ stack=()=>runQ(qs,u.t,(ok,n)=>{const r=ok/n;const s=r>=.9?3:r>=.7?2:r>=.4?1:0;
+  const prev=L.done[u.id];if(s>0&&(prev===undefined||s>prev))L.done[u.id]=s;addXP(ok*5+(s>=1?20:0));save();
+  stack=()=>{$('#app').innerHTML=`<div class="big">${s>=2?'🎉':s?'👍':'💪'}</div><h1 class="center">${ok} من ${n}</h1><div class="center stars" style="font-size:36px">${'★'.repeat(s)+'☆'.repeat(3-s)}</div><p class="center">${s?'حصلتي على '+(ok*5+20)+' نقطة':'محتاجة 40% عالأقل عشان تعدّي. جربي تاني!'}</p><button class="btn" onclick="appBack()">رجوع للمسار</button><div style="height:8px"></div><button class="btn2" onclick="quiz(UNITS_ALL.find(x=>x.id==${u.id}))">إعادة التمرين</button>`};render()});render()}
+function srsMark(w,good){const k=w.de;const s=L.srs[k]||{box:0,due:0};
+ if(good){s.box=Math.min(5,s.box+1);s.due=Date.now()+[0,1,2,4,8,16][s.box]*ONE}else{s.box=0;s.due=Date.now()+10*60*1000}L.srs[k]=s;save()}
+function reviewHome(){const due=Object.keys(L.srs).filter(k=>L.srs[k].due<=Date.now());const tot=Object.keys(L.srs).length;
+ const hard=Object.keys(L.wrong).filter(k=>L.wrong[k]>0);
+ $('#app').innerHTML=topbar()+`<h1>🔁 المراجعة الذكية</h1><div class="card center"><div class="big">${due.length}</div>كلمة مستحقة للمراجعة اليوم<br><small style="color:var(--mu)">إجمالي الكلمات اللي اتعلمتيها: ${tot}</small></div>`+
+ (due.length?`<button class="btn" onclick="startRev()">ابدأ المراجعة</button>`:`<div class="card center">${tot?'خلصتي مراجعة النهارده 👏':'خلصي تمرين وحدة الأول وكلماتها هتظهر هنا.'}</div>`)+
+ (hard.length?`<div class="card unit" style="margin-top:12px;border-color:var(--bad)" onclick="startHard()"><div class="ic">😓</div><div class="m"><b>كلمات صعبة عليكي</b><br><small>${hard.length} كلمة غلطتي فيها قبل كده — ركزي عليها</small></div><span style="font-size:22px">▶</span></div>`:'');
+ window.startRev=()=>{const ws=due.map(k=>ALLW.find(x=>x.de===k)).filter(Boolean).slice(0,12);const qs=mkQ(0,ws,[]);
+  stack=()=>runQ(qs,'مراجعة',(ok,n)=>{addXP(ok*3);stack=()=>{$('#app').innerHTML=`<div class="big">✅</div><h1 class="center">${ok} من ${n}</h1><button class="btn" onclick="appBack()">تمام</button>`};render()});render()};
+ window.startHard=()=>{const ws=hard.map(k=>ALLW.find(x=>x.de===k)).filter(Boolean).slice(0,12);const qs=mkQ(0,ws,[]);
+  stack=()=>runQ(qs,'كلمات صعبة',(ok,n)=>{addXP(ok*3);stack=()=>{$('#app').innerHTML=`<div class="big">💪</div><h1 class="center">${ok} من ${n}</h1><button class="btn" onclick="appBack()">تمام</button>`};render()});render()}}
+function talkHome(){$('#app').innerHTML=`<h1>💬 محادثات حقيقية</h1><p style="color:var(--mu)">اسمعي المحادثة، وبعدين اقلبي الدور وردّي إنتي بنفسك.</p>`+
+ DIALOGS.map((d,k)=>`<div class="card unit" onclick="openDlg(${k})"><div class="ic">${d.icon}</div><div class="m"><b>${d.t}</b><br><small>${d.lines.length} جملة · تشغيل + لعب الأدوار</small></div><span style="font-size:22px">▶</span></div>`).join('')}
+function openDlg(k){const d=DIALOGS[k];
+ stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>${d.icon} ${d.t}</b><span class="chip">${d.lines.length} جملة</span></div>`+
+ d.lines.map((l,j)=>`<div class="dlg ${l[2]?'me':'ot'}"><div class="av">${l[2]?'إنتي':'🗣️'}</div><div class="bub"><span class="de">${l[0]}</span> <button class="sp" style="font-size:18px" onclick="speak('${escQ(l[0])}')">🔊</button><br><small>${l[1]}</small></div></div>`).join('')+
+ `<div class="row"><button class="btn" onclick="playDlg(${k})">▶ تشغيل الكل</button><button class="btn2" onclick="rolePlay(${k})">🎭 العبي دورك</button></div>`};render()}
+let DLG_STOP=false;
+function playDlg(k){const d=DIALOGS[k];DLG_STOP=false;let j=0;
+ const nx=()=>{if(DLG_STOP||j>=d.lines.length){DLG_STOP=false;return}const l=d.lines[j];
+  $('#app').innerHTML=`<div class="top"><button class="sp" onclick="DLG_STOP=true;openDlg(${k})">→</button><b>▶ ${d.t}</b><span class="chip">${j+1}/${d.lines.length}</span></div>
+  <div class="card center" style="padding:36px 16px"><span class="tag">${l[2]?'إنتي':'الطرف التاني'}</span><div class="de" style="font-size:24px;margin:14px 0">${l[0]}</div><div style="color:var(--mu)">${l[1]}</div>
+  <div style="margin-top:14px"><button class="sp" style="font-size:38px" onclick="speak('${escQ(l[0])}')">🔊</button></div></div>
+  <button class="btn2" onclick="DLG_STOP=true;openDlg(${k})">إيقاف</button>`;
+  speak(l[0]);j++;setTimeout(nx,3400)};
+ stack=nx;render()}
+function rolePlay(k){const d=DIALOGS[k];const qs=d.lines.filter(l=>l[2]===1);let i=0,ok=0;
+ const step=()=>{if(i>=qs.length){addXP(ok*5);
+  stack=()=>{$('#app').innerHTML=`<div class="big">${ok===qs.length?'🌟':'👍'}</div><h1 class="center">${ok} من ${qs.length}</h1><p class="center">${ok===qs.length?'أديتي الدور كامل!':'راجعي المحادثة وجربي تاني.'}</p><button class="btn" onclick="appBack()">تمام</button>`};render();return}
+  const l=qs[i];const prev=d.lines[d.lines.indexOf(l)-1];const others=shuffle(DIALOGS.flatMap(x=>x.lines).filter(x=>x[2]===1&&x[0]!==l[0])).slice(0,2).map(x=>x[0]);
+  const opts=shuffle([l[0],...others]);
+  stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">✕</button><b>🎭 ${d.t}</b><span class="chip">${i+1}/${qs.length}</span></div><div class="prog"><i style="width:${i/qs.length*100}%"></i></div>
+  ${prev?`<div class="dlg ot"><div class="av">🗣️</div><div class="bub"><span class="de">${prev[0]}</span> <button class="sp" style="font-size:18px" onclick="speak('${escQ(prev[0])}')">🔊</button><br><small>${prev[1]}</small></div></div>`:''}
+  <p class="center"><b>ردّي بإيه؟</b> (${l[1]})</p>`+opts.map((o,j2)=>`<button class="opt de" onclick="rpick('${escQ(o)}')">${o}</button>`).join('')+`<div id="fb"></div>`;
+  if(prev)speak(prev[0])};render()};
+ window.rpick=o=>{const l=qs[i];const good=o===l[0];if(good)ok++;
+  document.querySelectorAll('.opt').forEach(b=>{if(b.textContent===l[0])b.classList.add('ok');else if(b.textContent===o&&!good)b.classList.add('bad')});
+  $('#fb').innerHTML=`<div class="msg ${good?'ok':'bad'}">${good?'رد صح! ✅':'غلط ❌ الصح: '+l[0]}</div><button class="btn" onclick="rnext()">التالي</button>`;if(good)speak(o)};
+ window.rnext=()=>{i++;step()};step()}
+function toolsHome(){const a1done=UNITS.every(u=>L.done[u.id]!==undefined),alldone=UNITS_ALL.every(u=>L.done[u.id]!==undefined);
+ $('#app').innerHTML=`<h1>📚 الأدوات</h1>`+
+ [['dict','🔎','القاموس','ابحثي في كل كلمات وجمل التطبيق'],
+  ['conj','🧮','تصريف الأفعال','أهم الأفعال مصرفة مع أمثلة وصوت'],
+  ['abc','🔤','النطق والحروف','الأبجدية والأصوات الخاصة بالألماني'],
+  ['gram','📘','القواعد المبسطة','A1 و A2 بشرح مصري'],
+  ['place','🎯','اختبار تحديد المستوى','افتحي الوحدات على مستواك'],
+  ['cert','🏆','شهادتي',alldone?'شهادة إتمام المستويين جاهزة':a1done?'شهادة إتمام A1 جاهزة':'خلصي الوحدات وخدي شهادتك']]
+ .map(([k,i,t,s])=>`<div class="card toolcard" onclick="openTool('${k}')"><div class="ic">${i}</div><div class="m" style="flex:1"><b>${t}</b><br><small style="color:var(--mu)">${s}</small></div><span style="font-size:22px">▶</span></div>`).join('')}
+function openTool(k){({dict,conj,abc,gram,place:placement,cert:certHome})[k]()}
+function dict(){let q='';
+ stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>🔎 القاموس</b><span class="chip">${ALLW.length} كلمة</span></div>
+ <input class="srch" id="dq" placeholder="اكتبي بالألماني أو بالعربي..." value="${q}">
+ <div id="dres"></div>`;
+ const dr=()=>{const r=q.trim().toLowerCase();const list=r?ALLW.filter(w=>w.de.toLowerCase().includes(r)||w.ar.includes(q.trim())):ALLW.slice(0,30);
+  $('#dres').innerHTML=(list.length?list.map(w=>`<div class="card unit" onclick="speak('${escQ(w.de)}')"><div class="m"><span class="de">${w.de}</span><br><small>${w.ar}</small></div><span style="font-size:20px">🔊</span></div>`).join(''):`<div class="card center">مفيش نتيجة لـ "${q}"</div>`)+
+  (r?'':`<p class="center" style="color:var(--mu);font-size:13px">اكتبي في البحث عشان توصلي لأي كلمة بسرعة</p>`)};
+ $('#dq').oninput=e=>{q=e.target.value;dr()};dr()};render()}
+function conj(){stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>🧮 تصريف الأفعال</b><span class="chip">${VERBS.length} فعل</span></div>
+ <p style="color:var(--mu)">المضارع: ich / du / er / wir / ihr / sie</p>`+
+ VERBS.map(v=>`<div class="card"><div class="top" style="margin-bottom:8px"><b class="de" style="font-size:20px">${v[0]}</b><span>${v[1]} <button class="sp" style="font-size:18px" onclick="speak('${v[0]}')">🔊</button></span></div>
+ <table class="conj"><tr>${['ich','du','er/sie','wir','ihr','sie'].map((p,k)=>`<td><small style="color:var(--mu)">${p}</small><br><b class="de">${v[2][k]}</b></td>`).join('')}</tr></table>
+ <p style="margin:8px 0 0;font-size:14px"><span class="de">${v[3][0]}</span> <button class="sp" style="font-size:16px" onclick="speak('${escQ(v[3][0])}')">🔊</button><br><small style="color:var(--mu)">${v[3][1]}</small></p></div>`).join('')};render()}
+function abc(){stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>🔤 النطق والحروف</b></div><p style="color:var(--mu)">اضغطي على أي صوت لسماع مثال عليه.</p>`+
+ `<div class="card"><b>الأبجدية:</b><p class="de" style="font-size:18px;line-height:2">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Ä Ö Ü ß</p><button class="btn2" onclick="speak('A, Be, Ze, De, E, Eff, Ge, Ha, I, Jott, Ka, Ell, Emm, Enn, O, Pe, Ku, Err, Ess, Te, U, Vau, We, Iks, Ypsilon, Zett')">🔊 اسمعي الأبجدية</button></div>`+
+ ALPHA.map(a=>`<div class="card unit" onclick="speak('${a[2].split(' / ')[0]}')"><div class="ic de">${a[0]}</div><div class="m">${a[1]}<br><small class="de">${a[2]}</small></div><span style="font-size:22px">🔊</span></div>`).join('')};render()}
+function gram(){stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>📘 القواعد المبسطة</b></div>
+ <h2>الأساسيات (A1)</h2>`+GRAM.map(g=>`<div class="card"><b>${g[0]}</b><p style="margin:6px 0 0;line-height:1.8">${g[1]}</p></div>`).join('')+
+ `<h2>المستوى التاني (A2)</h2>`+GRAM2.map(g=>`<div class="card"><b>${g[0]}</b><p style="margin:6px 0 0;line-height:1.8">${g[1]}</p></div>`).join('')};render()}
+function placement(){const pool=shuffle(ALLW).filter((w,k)=>k%2===0);const ws=[];for(let band=0;band<5;band++){const bandWords=shuffle(ALLW.filter(w=>w.u>band*4&&w.u<=(band+1)*4));ws.push(...bandWords.slice(0,3))}
+ const qs=ws.map(w=>({type:'de2ar',w,opts:shuffle([w,...shuffle(ALLW.filter(x=>x.de!==w.de)).slice(0,3)])}));
+ stack=()=>runQ(qs,'تحديد المستوى',(ok,n)=>{let upto=0;if(ok>=14)upto=16;else if(ok>=12)upto=12;else if(ok>=9)upto=8;else if(ok>=5)upto=4;
+  if(upto){for(let i=1;i<=upto;i++)if(L.done[i]===undefined)L.done[i]=1}
+  L.placed=true;addXP(ok*4);save();
+  stack=()=>{$('#app').innerHTML=`<div class="big">🎯</div><h1 class="center">${ok} من ${n}</h1><p class="center">${upto?`مستواك واضح إنه كويس! فتحنالك أول ${upto} وحدة بنجمة واحدة — ابدئي من وحدة ${upto+1} وكمّلي.`:'الأحسن تبدئي من الوحدة الأولى وتبني أساسك خطوة بخطوة. يلا بينا! 💪'}</p><button class="btn" onclick="appBack()">ابدأ التعلم</button>`};render()});render()}
+function certHome(){const a1done=UNITS.every(u=>L.done[u.id]!==undefined),alldone=UNITS_ALL.every(u=>L.done[u.id]!==undefined);
+ stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>🏆 شهادتي</b></div>`+
+ (!L.name?`<div class="card"><b>اسمك على الشهادة</b><input class="srch" id="nm" placeholder="اكتبي اسمك" style="margin-top:8px"><button class="btn" onclick="L.name=document.getElementById('nm').value.trim()||'';save();render()">حفظ الاسم</button></div>`:'')+
+ `<div class="card ${a1done?'':'lock'}"><b>شهادة المستوى الأول A1</b><p style="color:var(--mu);font-size:14px">${a1done?'مبروووك! خلصتي كل وحدات A1 🎉':'خلصتي '+UNITS.filter(u=>L.done[u.id]!==undefined).length+' من '+UNITS.length+' وحدة'}</p>${a1done?`<button class="btn" onclick="showCert('A1')">عرض الشهادة 🏆</button>`:''}</div>
+ <div class="card ${alldone?'':'lock'}"><b>شهادة إتمام المستويين A1+A2</b><p style="color:var(--mu);font-size:14px">${alldone?'أسطوري! خلصتي التطبيق كله 👑':'خلصتي '+Object.keys(L.done).length+' من '+UNITS_ALL.length+' وحدة'}</p>${alldone?`<button class="btn" onclick="showCert('A1 + A2')">عرض الشهادة 👑</button>`:''}</div>`};render()}
+function showCert(lvl){const nm=L.name||'بطلة الألماني';const dt=new Date().toLocaleDateString('ar-EG-u-nu-latn');
+ stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>🏆 شهادتك</b><span></span></div>
+ <div class="certwrap"><canvas id="cv" width="1200" height="850"></canvas></div>
+ <button class="btn" style="margin-top:12px" onclick="saveCert()">💾 حفظ الشهادة في الصور</button>
+ <p class="center" style="color:var(--mu);font-size:13px">أو خدي سكرين شوت وشاركيها 🎉</p>`;
+ const c=$('#cv').getContext('2d');const g=c.createLinearGradient(0,0,1200,850);g.addColorStop(0,'#0f9d8a');g.addColorStop(1,'#0b7a6b');
+ c.fillStyle='#fdf8ef';c.fillRect(0,0,1200,850);c.strokeStyle='#0f9d8a';c.lineWidth=14;c.strokeRect(40,40,1120,770);
+ c.strokeStyle='#ffb020';c.lineWidth=4;c.strokeRect(64,64,1072,722);
+ c.direction='rtl';c.textAlign='center';c.fillStyle='#0b7a6b';c.font='bold 64px system-ui';c.fillText('شهادة إتمام',600,180);
+ c.font='30px system-ui';c.fillStyle='#6b8280';c.fillText('تطبيق ألماني من الصفر يشهد بأن',600,250);
+ c.fillStyle='#12302e';c.font='bold 72px system-ui';c.fillText(nm,600,370);
+ c.fillStyle='#6b8280';c.font='30px system-ui';c.fillText('أتمت بنجاح كل دروس وتمارين مستوى',600,440);
+ c.fillStyle='#b07800';c.font='bold 60px system-ui';c.fillText(lvl==='A1'?'A1 — أساسيات اللغة الألمانية':'A1 + A2 — أساسيات وتقدم اللغة الألمانية',600,540);
+ c.fillStyle='#6b8280';c.font='26px system-ui';c.fillText('بتاريخ '+dt,600,620);
+ c.direction='ltr';c.font='bold 40px system-ui';c.fillStyle='#0f9d8a';c.fillText('Deutsch von Null',600,720);
+ c.fillStyle='#ffb020';c.font='44px system-ui';c.fillText('★',600,775)};render()}
+function saveCert(){const c=$('#cv');const url=c.toDataURL('image/png');
+ if(window.Android&&Android.saveImage){const r=Android.saveImage(url,'shahada-deutsch.png');
+  if(r&&r.indexOf('ERR')===0)alert('حصلت مشكلة في الحفظ: جربي سكرين شوت');}
+ else alert('في المتصفح: اعملي لقطة شاشة للشهادة. من التطبيق بتتحفظ في الصور مباشرة.')}
+const LEVELS=['مبتدئة 🌱','هاوية 🌿','مجتهدة 🌷','متقدمة 🌟','محترفة 💫','بطلة الألماني 👑'];
+function me(){const learned=Object.values(L.srs).filter(s=>s.box>=3).length;
+ const lvl=Math.min(5,Math.floor(L.xp/250));const next=(lvl+1)*250;
+ let correct=0,total=0;Object.entries(L.wrong).forEach(([k,v])=>{total+=v});
+ $('#app').innerHTML=`<h1>👤 أنا</h1>`+topbar()+
+ `<div class="lvl"><b style="font-size:18px">مستواك: ${LEVELS[lvl]}</b><div class="bar" style="background:rgba(255,255,255,.3)"><i style="width:${Math.min(100,(L.xp-lvl*250)/250*100)}%"></i></div><small>${lvl>=5?'وصلتي لأعلى مستوى 👑':'فاضل '+(next-L.xp)+' نقطة للمستوى اللي بعده'}</small></div>`+
+ `<div class="card"><b>📊 نشاط آخر 7 أيام</b><canvas class="chart" id="wk" width="640" height="220" style="margin-top:8px"></canvas></div>`+
+ `<div class="card"><b>إحصائيات</b><p>الوحدات المكتملة: ${Object.keys(L.done).length}/${UNITS_ALL.length}<br>كلمات متمكنة منها: ${learned}<br>كلمات في المراجعة: ${Object.keys(L.srs).length}<br>أطول سلسلة أيام: 🔥 ${L.streak}</p></div>
+ <div class="card"><b>الهدف اليومي (نقاط)</b><div class="row" style="margin-top:8px">${[20,30,50,80].map(g=>`<button class="${L.goal===g?'btn':'btn2'}" onclick="L.goal=${g};save();me()">${g}</button>`).join('')}</div></div>
+ <div class="card"><b>اسمك (بيظهر في الشهادة)</b><div class="row" style="margin-top:8px"><input class="srch" id="nm2" style="margin:0" value="${L.name}" placeholder="اسمك"><button class="btn2" style="flex:0 0 90px" onclick="L.name=document.getElementById('nm2').value.trim();save();me()">حفظ</button></div></div>
+ <div class="card"><b>الوضع الليلي</b><button class="btn2" style="margin-top:8px" onclick="L.dark=!L.dark;document.body.classList.toggle('dark');save();me()">${L.dark?'إيقاف':'تشغيل'}</button></div>
+ <div class="card"><b>مصادر مجانية تكمّل بيها</b><p style="line-height:1.9;margin:6px 0 0">DW Nicos Weg (learngerman.dw.com)<br>Easy German على يوتيوب<br>Anki لمراجعة الكلمات</p></div>
+ <button class="btn2" onclick="if(confirm('تمسحي كل التقدم؟')){localStorage.removeItem('de_state');location.reload()}">مسح التقدم</button>
+ <p class="center" style="color:var(--mu);font-size:13px">الإصدار 2.0 — مجاني بالكامل ويشتغل بدون إنترنت</p>`;
+ const c=$('#wk').getContext('2d');c.clearRect(0,0,640,220);const days=[];for(let k=6;k>=0;k--){const d=new Date(Date.now()-k*ONE);const key=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();days.push({k,v:L.hist[key]||0,l:['أحد','اتنين','تلاتا','أربع','خميس','جمعه','سبت'][d.getDay()]})}
+ const mx=Math.max(20,...days.map(d=>d.v));const bw=52,gap=(640-7*bw)/8;
+ days.forEach((d,k)=>{const h=d.v/mx*140;const x=gap+k*(bw+gap),y=180-h;
+  c.fillStyle=d.v?'#0f9d8a':'#dfe9e7';c.beginPath();c.roundRect(x,y,bw,h||6,8);c.fill();
+  c.fillStyle='#6b8280';c.font='20px system-ui';c.textAlign='center';c.fillText(d.l,x+bw/2,208);
+  if(d.v){c.fillStyle='#12302e';c.fillText(d.v,x+bw/2,y-8)}})}
+render();
+// خطاف لقطات للتطوير فقط
+const qp=new URLSearchParams(location.search);
+if(qp.get('demo')){Object.assign(L,{xp:1240,streak:12,goal:30,name:'سارة',placed:true,done:{1:3,2:3,3:2,4:2,5:1,6:1},hist:{}});const d=new Date();for(let k=6;k>=0;k--){const x=new Date(Date.now()-k*ONE);const key=x.getFullYear()+'-'+(x.getMonth()+1)+'-'+x.getDate();L.hist[key]=[40,25,60,30,45,20,55][6-k]}L.srs={'Hallo':{box:3,due:0},'Danke':{box:2,due:0},'eins':{box:1,due:0}};L.wrong={'Tschüss':2};render()}
+if(qp.get('shot')){const s=qp.get('shot');
+ if(s==='unit')openUnit(1);else if(s==='quiz')quiz(UNITS[0]);else if(s==='talk')openDlg(1);else if(s==='dict'){tab='tools';dict()}else if(s==='conj'){tab='tools';conj()}else if(s==='me'){tab='me';render()}else if(s==='rev'){tab='rev';render()}else if(s==='cert'){Object.keys(L.done);for(let i=1;i<=12;i++)L.done[i]=L.done[i]||2;showCert('A1')}}
+</script></body></html>
