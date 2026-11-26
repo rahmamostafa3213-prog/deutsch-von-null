@@ -1,4 +1,4 @@
-# ألماني من الصفر — Deutsch von Null
+# Wortgarten — ألماني من الصفر
 
 تطبيق أندرويد مجاني بالكامل لتعليم اللغة الألمانية من الصفر لمستوى A2، بالعربي المصري، يشتغل من غير إنترنت، من غير إعلانات، من غير حسابات، ومن غير أي رسوم.
 
@@ -35,7 +35,7 @@
 # أنشئ مفتاح التوقيع الخاص بك أولاً:
 keytool -genkeypair -keystore keystore.jks -alias key0 -keyalg RSA -keysize 2048 -validity 10000
 ./build-apk.sh
-# الناتج: build/Deutsch-von-Null-v2.apk
+# الناتج: build/Wortgarten-v2.1.apk
 ```
 
 ## الخصوصية

@@ -12,5 +12,5 @@ d8 --min-api 24 --output build/ build/obj/com/deutsch/vonnull/*.class
 cp build/app-unsigned.apk build/app-dex.apk
 (cd build && zip -q app-dex.apk classes.dex)
 zipalign -f -p 4 build/app-dex.apk build/app-aligned.apk
-apksigner sign --ks keystore.jks --ks-pass pass:deutsch123 --key-pass pass:deutsch123 --out build/Deutsch-von-Null-v2.apk build/app-aligned.apk
-apksigner verify build/Deutsch-von-Null-v2.apk && echo "BUILD OK: build/Deutsch-von-Null-v2.apk"
+apksigner sign --ks keystore.jks --ks-pass pass:deutsch123 --key-pass pass:deutsch123 --out build/Wortgarten-v2.1.apk build/app-aligned.apk
+apksigner verify build/Wortgarten-v2.1.apk && echo "BUILD OK: build/Wortgarten-v2.1.apk"

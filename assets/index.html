@@ -1,6 +1,6 @@
 <!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>ألماني من الصفر</title>
+<title>Wortgarten — ألماني من الصفر</title>
 <style>
 :root{--bg:#f4f7f6;--card:#fff;--tx:#12302e;--mu:#6b8280;--pr:#0f9d8a;--pr2:#0b7a6b;--ac:#ffb020;--ok:#1fa65a;--bad:#e5484d;--bd:#dfe9e7;--vio:#7c5cd6}
 .dark{--bg:#0e1a19;--card:#172a28;--tx:#e8f3f1;--mu:#8fa9a5;--bd:#26403d}
@@ -54,6 +54,8 @@ canvas.chart{width:100%;border-radius:14px;background:var(--card);border:1px sol
 .toolcard{display:flex;gap:12px;align-items:center;cursor:pointer}
 .toolcard .ic{font-size:26px;width:46px;height:46px;border-radius:14px;background:var(--bg);display:grid;place-items:center}
 .certwrap canvas{width:100%;border-radius:14px;border:1px solid var(--bd)}
+.credit{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px}
+.rmark{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--pr),var(--pr2));color:var(--ac);font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:900;font-size:28px;line-height:1;transform:rotate(-8deg);box-shadow:0 3px 8px rgba(11,122,107,.35);text-shadow:0 1px 2px rgba(0,0,0,.3);flex-shrink:0}
 </style></head><body><div id="app"></div>
 <nav id="nav"></nav>
 <script src="data.js"></script>
@@ -246,12 +248,12 @@ function showCert(lvl){const nm=L.name||'بطلة الألماني';const dt=new
  c.fillStyle='#fdf8ef';c.fillRect(0,0,1200,850);c.strokeStyle='#0f9d8a';c.lineWidth=14;c.strokeRect(40,40,1120,770);
  c.strokeStyle='#ffb020';c.lineWidth=4;c.strokeRect(64,64,1072,722);
  c.direction='rtl';c.textAlign='center';c.fillStyle='#0b7a6b';c.font='bold 64px system-ui';c.fillText('شهادة إتمام',600,180);
- c.font='30px system-ui';c.fillStyle='#6b8280';c.fillText('تطبيق ألماني من الصفر يشهد بأن',600,250);
+ c.font='30px system-ui';c.fillStyle='#6b8280';c.fillText('تطبيق Wortgarten يشهد بأن',600,250);
  c.fillStyle='#12302e';c.font='bold 72px system-ui';c.fillText(nm,600,370);
  c.fillStyle='#6b8280';c.font='30px system-ui';c.fillText('أتمت بنجاح كل دروس وتمارين مستوى',600,440);
  c.fillStyle='#b07800';c.font='bold 60px system-ui';c.fillText(lvl==='A1'?'A1 — أساسيات اللغة الألمانية':'A1 + A2 — أساسيات وتقدم اللغة الألمانية',600,540);
  c.fillStyle='#6b8280';c.font='26px system-ui';c.fillText('بتاريخ '+dt,600,620);
- c.direction='ltr';c.font='bold 40px system-ui';c.fillStyle='#0f9d8a';c.fillText('Deutsch von Null',600,720);
+ c.direction='ltr';c.font='bold 40px system-ui';c.fillStyle='#0f9d8a';c.fillText('Wortgarten',600,720);
  c.fillStyle='#ffb020';c.font='44px system-ui';c.fillText('★',600,775)};render()}
 function saveCert(){const c=$('#cv');const url=c.toDataURL('image/png');
  if(window.Android&&Android.saveImage){const r=Android.saveImage(url,'shahada-deutsch.png');
@@ -270,7 +272,8 @@ function me(){const learned=Object.values(L.srs).filter(s=>s.box>=3).length;
  <div class="card"><b>الوضع الليلي</b><button class="btn2" style="margin-top:8px" onclick="L.dark=!L.dark;document.body.classList.toggle('dark');save();me()">${L.dark?'إيقاف':'تشغيل'}</button></div>
  <div class="card"><b>مصادر مجانية تكمّل بيها</b><p style="line-height:1.9;margin:6px 0 0">DW Nicos Weg (learngerman.dw.com)<br>Easy German على يوتيوب<br>Anki لمراجعة الكلمات</p></div>
  <button class="btn2" onclick="if(confirm('تمسحي كل التقدم؟')){localStorage.removeItem('de_state');location.reload()}">مسح التقدم</button>
- <p class="center" style="color:var(--mu);font-size:13px">الإصدار 2.0 — مجاني بالكامل ويشتغل بدون إنترنت</p>`;
+  <div class="card credit"><span class="rmark">R</span><b style="font-size:17px">تصميم: زوجة وليد أحمد</b></div>
+ <p class="center" style="color:var(--mu);font-size:13px">الإصدار 2.1 — مجاني بالكامل ويشتغل بدون إنترنت</p>`;
  const c=$('#wk').getContext('2d');c.clearRect(0,0,640,220);const days=[];for(let k=6;k>=0;k--){const d=new Date(Date.now()-k*ONE);const key=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();days.push({k,v:L.hist[key]||0,l:['أحد','اتنين','تلاتا','أربع','خميس','جمعه','سبت'][d.getDay()]})}
  const mx=Math.max(20,...days.map(d=>d.v));const bw=52,gap=(640-7*bw)/8;
  days.forEach((d,k)=>{const h=d.v/mx*140;const x=gap+k*(bw+gap),y=180-h;
