@@ -2,7 +2,7 @@
 
 تطبيق أندرويد مجاني بالكامل لتعليم الألمانية لمتحدثي العربية، من تحت الصفر حتى A2. بدون إعلانات، بدون حسابات، ويشتغل بدون إنترنت.
 
-## المميزات (v2.3)
+## المميزات (v2.4)
 - 🐣 مسار "ابدأ من الصفر": الحروف والأصوات بالصوت، الضمائر، der/die/das، الأرقام، أول جمل — شرح + اختبار لكل نقطة
 - 🎬 6 دروس فيديو مصممة بجرافيك متحرك وتعليق صوتي (شرح عربي + نطق ألماني)، تشتغل أوفلاين
 - 🎤 تدريب نطق بالميكروفون: التطبيق يسمع نطقك ويقيّمه من 100 ويصححلك
@@ -23,3 +23,8 @@
 ## v2.3
 - Language switch (🌐 on the top bar and in Settings): Arabic, English, German. Lesson and UI text is translated; the 6 video lessons stay Arabic narration + German.
 - Optional AI tutor: you paste your own free Google AI Studio (Gemini) key in Settings. The key is stored on the phone only (no-backup app storage) and requests are made natively, so JavaScript never sees it. The app works fully without it.
+
+## v2.4
+- Pronunciation notes under every word (unit cards, dictionary, quiz corrections, speaking practice), in Arabic/English/German. Rule-based guidance with a small exceptions list for loanwords.
+- 20 new pronunciation videos (vowels, long/short, umlauts, ei/ie/eu/au, ch, sch/sp/st, R, S/Z, V/W/F/J, G/K/Q/X, H, word endings, clusters, stress, melody, loanwords, long words, numbers, common mistakes). Total 26 videos.
+- New design pass: vector icons replace emoji, consistent spacing, shadows and motion.

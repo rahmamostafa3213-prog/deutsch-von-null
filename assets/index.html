@@ -206,7 +206,7 @@ function listenUnit(id){const u=UNITS_ALL.find(x=>x.id===id);LISTEN_STOP=false;l
  speak(it[0]);if(!LISTEN_STOP)setTimeout(()=>{if(!LISTEN_STOP&&stack){i=(i+1)%items.length;render()}},3200)};render()}
 function matchGame(id){const u=UNITS_ALL.find(x=>x.id===id);const ws=shuffle(u.w).slice(0,6);const cards=shuffle(ws.flatMap((w,k)=>[{t:w[0],k,l:'de'},{t:w[1],k,l:'ar'}]));
  let first=null,moves=0,hits=0,lock=false;
- const draw=()=>{$('#mg').innerHTML=cards.map((c,j)=>c.done?`<button class="hit">${c.t}</button>`:`<button class="${first===j?'sel':''}" onclick="mtap(${j})">${c.t}</button>`).join('')};
+ const draw=()=>{if(!$('#mg'))return;$('#mg').innerHTML=cards.map((c,j)=>c.done?`<button class="hit">${c.t}</button>`:`<button class="${first===j?'sel':''}" onclick="mtap(${j})">${c.t}</button>`).join('')};
  window.mtap=j=>{if(lock||cards[j].done||first===j)return;
   if(first===null){first=j;draw();return}
   const a=cards[first],b=cards[j];moves++;
