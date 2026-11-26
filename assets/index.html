@@ -466,7 +466,7 @@ function me(){const learned=Object.values(L.srs).filter(s=>s.box>=3).length;
  <div class="card"><b>مصادر مجانية تكمّل بيها</b><p style="line-height:1.9;margin:6px 0 0">DW Nicos Weg (learngerman.dw.com)<br>Easy German على يوتيوب<br>Anki لمراجعة الكلمات</p></div>
  <button class="btn2" onclick="if(confirm('تمسحي كل التقدم؟')){localStorage.removeItem('de_state');location.reload()}">مسح التقدم</button>
   <div class="card credit"><span class="rmark">R</span><b style="font-size:17px">تصميم: زوجة وليد أحمد</b></div>
- <p class="center" style="color:var(--mu);font-size:13px">الإصدار 2.4 — مجاني بالكامل ويشتغل بدون إنترنت</p>`;
+ <p class="center" style="color:var(--mu);font-size:13px">الإصدار 2.4.1 — مجاني بالكامل ويشتغل بدون إنترنت</p>`;
  const c=$('#wk').getContext('2d');c.clearRect(0,0,640,220);const days=[];for(let k=6;k>=0;k--){const d=new Date(Date.now()-k*ONE);const key=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();days.push({k,v:L.hist[key]||0,l:['أحد','اتنين','تلاتا','أربع','خميس','جمعه','سبت'][d.getDay()]})}
  const mx=Math.max(20,...days.map(d=>d.v));const bw=52,gap=(640-7*bw)/8;
  days.forEach((d,k)=>{const h=d.v/mx*140;const x=gap+k*(bw+gap),y=180-h;
