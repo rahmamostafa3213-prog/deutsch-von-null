@@ -71,9 +71,11 @@ canvas.chart{width:100%;border-radius:14px;background:var(--card);border:1px sol
 <script src="data2.js"></script>
 <script src="data3.js"></script>
 <script src="data4.js"></script>
+<script src="i18n.js"></script>
+<script src="i18n_rt.js"></script>
 <script>
 const $=s=>document.querySelector(s);
-const DEF={xp:0,streak:0,last:'',done:{},srs:{},today:{d:'',xp:0},dark:false,goal:30,hist:{},wrong:{},name:'',placed:false};
+const DEF={lang:'ar',tmodel:'',xp:0,streak:0,last:'',done:{},srs:{},today:{d:'',xp:0},dark:false,goal:30,hist:{},wrong:{},name:'',placed:false};
 const L=Object.assign({},DEF,JSON.parse(localStorage.getItem('de_state')||'{}'));
 const save=()=>localStorage.setItem('de_state',JSON.stringify(L));
 const day=()=>{const d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()};
@@ -94,12 +96,12 @@ window.appBack=function(){if(stack){stack=null;render();return true}if(tab!=='ho
 function render(){if(curAudio){try{curAudio.pause();curAudio=null}catch(e){}}nav();window.scrollTo(0,0);
  if(stack)return stack();
  ({home,rev:reviewHome,talk:talkHome,tools:toolsHome,me})[tab]()}
-function topbar(){const d=day();const t=L.today.d===d?L.today.xp:0;return `<div class="top"><span class="chip">🔥 ${L.streak} يوم</span><span class="chip">⭐ ${L.xp} نقطة</span><span class="chip">🎯 ${Math.min(t,L.goal)}/${L.goal}</span></div>`}
+function topbar(){const d=day();const t=L.today.d===d?L.today.xp:0;return `<div class="top"><span class="chip">🔥 ${L.streak} يوم</span><span class="chip">⭐ ${L.xp} نقطة</span><span class="chip">🎯 ${Math.min(t,L.goal)}/${L.goal}</span><button class="chip" aria-label="Language" onclick="langPicker()">🌐</button></div>`}
 const escQ=s=>s.replace(/'/g,"\\'");
 function sectionList(list){return list.map(u=>{const s=L.done[u.id];const ok=unlocked(u.id);
  return `<div class="card unit ${ok?'':'lock'}" onclick="${ok?`openUnit(${u.id})`:`alert('خلصي الوحدة اللي قبلها الأول 🔒')`}"><div class="ic">${u.icon}</div><div class="m"><b>${u.id}. ${u.t}</b><br><small>${u.w.length} كلمة · ${u.p.length} جمل</small></div><div class="stars">${s===undefined?(ok?'▶':'🔒'):'★'.repeat(s)+'☆'.repeat(3-s)}</div></div>`}).join('')}
 function home(){const dn=Object.keys(L.done).length;
- $('#app').innerHTML=topbar()+`<div class="hero"><b>أهلاً${L.name?' يا '+L.name:''}! Hallo 👋</b><div>أكملتي ${dn} من ${UNITS_ALL.length} وحدة. كمّلي بنفس الحماس.</div><div class="bar"><i style="width:${dn/UNITS_ALL.length*100}%"></i></div></div>`+
+ $('#app').innerHTML=topbar()+`<div class="hero"><b>أهلاً${L.name?(window.LANG==='ar'?' يا ':' ')+L.name:''}! Hallo 👋</b><div>أكملتي ${dn} من ${UNITS_ALL.length} وحدة. كمّلي بنفس الحماس.</div><div class="bar"><i style="width:${dn/UNITS_ALL.length*100}%"></i></div></div>`+
  (L.placed?'':`<div class="card unit" onclick="placement()" style="border:2px solid var(--vio)"><div class="ic">🎯</div><div class="m"><b>اختبار تحديد المستوى</b><br><small>لو عندك أساس، خدي الاختبار وافتحي الوحدات على مستواك بدل ما تبدئي من الصفر</small></div><span style="font-size:22px">▶</span></div>`)+
  `<div class="card unit" onclick="zeroHome()" style="border:2px solid var(--pr)"><div class="ic">🐣</div><div class="m"><b>ابدأ من الصفر</b><br><small>مسار مبسط: الحروف والأصوات بالصوت، الضمائر، وأول جمل — خطوة بخطوة</small></div><span style="font-size:22px">▶</span></div>
  <div class="card unit" onclick="videoHome()" style="border:2px solid var(--ac)"><div class="ic">🎬</div><div class="m"><b>دروس فيديو بالصوت</b><br><small>شرح مصمم من تحت الصفر: من الحروف لحد ترتيب الجملة</small></div><span style="font-size:22px">▶</span></div>`+
@@ -307,6 +309,7 @@ function toolsHome(){const a1done=UNITS.every(u=>L.done[u.id]!==undefined),alldo
  [['zero','🐣','ابدأ من الصفر','مسار الحروف والأصوات والأساسيات خطوة بخطوة'],
   ['vids','🎬','دروس الفيديو','شرح بالصوت لكل نقطة من بداية اللغة'],
   ['pron','🎤','تدريب النطق','قولي الجملة والتطبيق يسمعك ويقيّم نطقك'],
+  ['tutor','🤖','المعلم الذكي','اتكلمي واكتبي مع معلم ذكاء اصطناعي يصحح لك (اختياري)'],
   ['dict','🔎','القاموس','ابحثي في كل كلمات وجمل التطبيق'],
   ['conj','🧮','تصريف الأفعال','أهم الأفعال مصرفة مع أمثلة وصوت'],
   ['abc','🔤','النطق والحروف','الأبجدية والأصوات الخاصة بالألماني'],
@@ -314,7 +317,7 @@ function toolsHome(){const a1done=UNITS.every(u=>L.done[u.id]!==undefined),alldo
   ['place','🎯','اختبار تحديد المستوى','افتحي الوحدات على مستواك'],
   ['cert','🏆','شهادتي',alldone?'شهادة إتمام المستويين جاهزة':a1done?'شهادة إتمام A1 جاهزة':'خلصي الوحدات وخدي شهادتك']]
  .map(([k,i,t,s])=>`<div class="card toolcard" onclick="openTool('${k}')"><div class="ic">${i}</div><div class="m" style="flex:1"><b>${t}</b><br><small style="color:var(--mu)">${s}</small></div><span style="font-size:22px">▶</span></div>`).join('')}
-function openTool(k){({dict,conj,abc,gram,place:placement,cert:certHome,zero:zeroHome,vids:videoHome,pron:pronHome})[k]()}
+function openTool(k){({dict,conj,abc,gram,place:placement,cert:certHome,zero:zeroHome,vids:videoHome,pron:pronHome,tutor:tutorHome})[k]()}
 function dict(){let q='';
  stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>🔎 القاموس</b><span class="chip">${ALLW.length} كلمة</span></div>
  <input class="srch" id="dq" placeholder="اكتبي بالألماني أو بالعربي..." value="${q}">
@@ -345,7 +348,7 @@ function certHome(){const a1done=UNITS.every(u=>L.done[u.id]!==undefined),alldon
  (!L.name?`<div class="card"><b>اسمك على الشهادة</b><input class="srch" id="nm" placeholder="اكتبي اسمك" style="margin-top:8px"><button class="btn" onclick="L.name=document.getElementById('nm').value.trim()||'';save();render()">حفظ الاسم</button></div>`:'')+
  `<div class="card ${a1done?'':'lock'}"><b>شهادة المستوى الأول A1</b><p style="color:var(--mu);font-size:14px">${a1done?'مبروووك! خلصتي كل وحدات A1 🎉':'خلصتي '+UNITS.filter(u=>L.done[u.id]!==undefined).length+' من '+UNITS.length+' وحدة'}</p>${a1done?`<button class="btn" onclick="showCert('A1')">عرض الشهادة 🏆</button>`:''}</div>
  <div class="card ${alldone?'':'lock'}"><b>شهادة إتمام المستويين A1+A2</b><p style="color:var(--mu);font-size:14px">${alldone?'أسطوري! خلصتي التطبيق كله 👑':'خلصتي '+Object.keys(L.done).length+' من '+UNITS_ALL.length+' وحدة'}</p>${alldone?`<button class="btn" onclick="showCert('A1 + A2')">عرض الشهادة 👑</button>`:''}</div>`};render()}
-function showCert(lvl){const nm=L.name||'بطلة الألماني';const dt=new Date().toLocaleDateString('ar-EG-u-nu-latn');
+function showCert(lvl){const nm=L.name||'بطلة الألماني';const dt=new Date().toLocaleDateString(window.LOCALE||'ar-EG-u-nu-latn');
  stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>🏆 شهادتك</b><span></span></div>
  <div class="certwrap"><canvas id="cv" width="1200" height="850"></canvas></div>
  <button class="btn" style="margin-top:12px" onclick="saveCert()">💾 حفظ الشهادة في الصور</button>
@@ -375,12 +378,14 @@ function me(){const learned=Object.values(L.srs).filter(s=>s.box>=3).length;
  `<div class="card"><b>إحصائيات</b><p>الوحدات المكتملة: ${Object.keys(L.done).length}/${UNITS_ALL.length}<br>كلمات متمكنة منها: ${learned}<br>كلمات في المراجعة: ${Object.keys(L.srs).length}<br>أطول سلسلة أيام: 🔥 ${L.streak}</p></div>
  <div class="card"><b>الهدف اليومي (نقاط)</b><div class="row" style="margin-top:8px">${[20,30,50,80].map(g=>`<button class="${L.goal===g?'btn':'btn2'}" onclick="L.goal=${g};save();me()">${g}</button>`).join('')}</div></div>
  <div class="card"><b>اسمك (بيظهر في الشهادة)</b><div class="row" style="margin-top:8px"><input class="srch" id="nm2" style="margin:0" value="${L.name}" placeholder="اسمك"><button class="btn2" style="flex:0 0 90px" onclick="L.name=document.getElementById('nm2').value.trim();save();me()">حفظ</button></div></div>
+ <div class="card"><b>🌐 لغة التطبيق</b><div class="row" style="margin-top:8px">${[['ar','العربية'],['en','English'],['de','Deutsch']].map(([k,n])=>`<button class="${(L.lang||'ar')===k?'btn':'btn2'}" onclick="setLang('${k}')">${n}</button>`).join('')}</div></div>
+ <div class="card"><b>🤖 المعلم الذكي (اختياري)</b><p style="color:var(--mu);font-size:14px;margin:6px 0">${tutorHasKey()?'المفتاح محفوظ على موبايلك فقط ✅':'مش مفعّل. التطبيق شغال كامل من غيره'}</p><button class="btn2" onclick="tutorSetup()">إعداد المعلم الذكي</button></div>
  <div class="card"><b>الوضع الليلي</b><button class="btn2" style="margin-top:8px" onclick="L.dark=!L.dark;document.body.classList.toggle('dark');save();me()">${L.dark?'إيقاف':'تشغيل'}</button></div>
  ${window.Android&&Android.voiceStatus?`<div class="card"><b>🔊 صوت النطق الألماني</b><p style="color:var(--mu);font-size:14px;margin:6px 0">${Android.voiceStatus()==='de'?'متسطب وشغال ✅':'مش متسطب على الموبايل ⚠️ النطق مش هيطلع صح من غيره'}</p>${Android.voiceStatus()!=='de'?`<button class="btn2" onclick="Android.openTtsSettings()">فتح إعدادات الصوت لتحميل الألماني</button>`:''}</div>`:''}
  <div class="card"><b>مصادر مجانية تكمّل بيها</b><p style="line-height:1.9;margin:6px 0 0">DW Nicos Weg (learngerman.dw.com)<br>Easy German على يوتيوب<br>Anki لمراجعة الكلمات</p></div>
  <button class="btn2" onclick="if(confirm('تمسحي كل التقدم؟')){localStorage.removeItem('de_state');location.reload()}">مسح التقدم</button>
   <div class="card credit"><span class="rmark">R</span><b style="font-size:17px">تصميم: زوجة وليد أحمد</b></div>
- <p class="center" style="color:var(--mu);font-size:13px">الإصدار 2.2 — مجاني بالكامل ويشتغل بدون إنترنت</p>`;
+ <p class="center" style="color:var(--mu);font-size:13px">الإصدار 2.3 — مجاني بالكامل ويشتغل بدون إنترنت</p>`;
  const c=$('#wk').getContext('2d');c.clearRect(0,0,640,220);const days=[];for(let k=6;k>=0;k--){const d=new Date(Date.now()-k*ONE);const key=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();days.push({k,v:L.hist[key]||0,l:['أحد','اتنين','تلاتا','أربع','خميس','جمعه','سبت'][d.getDay()]})}
  const mx=Math.max(20,...days.map(d=>d.v));const bw=52,gap=(640-7*bw)/8;
  days.forEach((d,k)=>{const h=d.v/mx*140;const x=gap+k*(bw+gap),y=180-h;
@@ -388,9 +393,66 @@ function me(){const learned=Object.values(L.srs).filter(s=>s.box>=3).length;
   c.fillStyle='#6b8280';c.font='20px system-ui';c.textAlign='center';c.fillText(d.l,x+bw/2,208);
   if(d.v){c.fillStyle='#12302e';c.fillText(d.v,x+bw/2,y-8)}})}
 render();
+
+/* ===== language switch ===== */
+function setLang(k){L.lang=k;save();try{window.Android&&Android.setLang&&Android.setLang(k)}catch(e){}location.reload()}
+try{window.Android&&Android.setLang&&Android.setLang(L.lang||'ar')}catch(e){}
+function langPicker(){const o=document.createElement('div');o.id='lgov';o.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:20;display:grid;place-items:center;padding:20px';
+ o.innerHTML=`<div class="card" style="width:100%;max-width:340px;direction:ltr;text-align:center"><b style="font-size:18px">🌐 Language · اللغة · Sprache</b>${[['ar','العربية'],['en','English'],['de','Deutsch']].map(([k,n])=>`<button class="${(L.lang||'ar')===k?'btn':'btn2'}" style="margin-top:10px" onclick="setLang('${k}')">${n}</button>`).join('')}<button class="sp" style="margin-top:6px;font-size:16px" onclick="document.getElementById('lgov').remove()">✕</button></div>`;
+ o.onclick=e=>{if(e.target===o)o.remove()};document.body.appendChild(o)}
+/* ===== AI tutor: optional, uses the user's own free Gemini key, stored on the phone only ===== */
+const TUTOR_MODELS=['gemini-3.5-flash-lite','gemini-3.6-flash','gemini-3.8-flash','gemini-4-hydrogen'];
+let TUTOR_REQ={},TCH=[],TBUSY=false;
+window.onTutorResult=s=>{try{const r=JSON.parse(s),f=TUTOR_REQ[r.id];if(f){delete TUTOR_REQ[r.id];f(r.code,r.body)}}catch(e){}};
+function tutorHttp(method,path,body){return new Promise(res=>{if(!(window.Android&&Android.tutorHttp)){res({code:-2,body:''});return}
+ const id='r'+Date.now()+Math.random().toString(36).slice(2,6);TUTOR_REQ[id]=(code,b)=>res({code:+code,body:b});Android.tutorHttp(id,method,path,body||'')})}
+function tutorHasKey(){try{return !!(window.Android&&Android.tutorHasKey&&Android.tutorHasKey())}catch(e){return false}}
+function tutorSystem(){const lng={ar:'Egyptian Arabic',en:'English',de:'simple German'}[window.LANG||'ar'];
+ return 'You are a friendly, patient German tutor inside a language-learning app. The learner is an Arabic speaker at level A1-A2 (beginner). Always: (1) answer first in short, simple German (2-3 sentences, A1-A2 words); (2) then explain in '+lng+' in 1-3 short lines; (3) if the learner wrote German with mistakes, show the corrected sentence and explain the mistake briefly; (4) end with one small question or mini exercise. Never ask for personal data. Stay on learning German. Plain text only.'}
+async function tutorAsk(){const hist=TCH.filter(m=>!m.err).slice(-10).map(m=>({role:m.role==='user'?'user':'model',parts:[{text:m.text}]}));
+ const body=JSON.stringify({systemInstruction:{parts:[{text:tutorSystem()}]},contents:hist,generationConfig:{temperature:.7,maxOutputTokens:700}});
+ const pick=(L.tmodel||'').trim();const list=(pick?[pick]:[]).concat(TUTOR_MODELS.filter(m=>m!==pick));let last={code:0};
+ for(const m of list){const r=await tutorHttp('POST','/v1beta/models/'+encodeURIComponent(m)+':generateContent',body);last=r;
+  if(r.code===200){try{const j=JSON.parse(r.body);const t=((((j.candidates||[])[0]||{}).content||{}).parts||[]).map(p=>p.text||'').join('').trim();if(t)return{ok:1,text:t}}catch(e){}return{ok:0,err:'empty'}}
+  if(r.code===400||r.code===401||r.code===403)return{ok:0,err:'key'};
+  if(r.code<0||r.code===0)return{ok:0,err:'net'}}
+ return{ok:0,err:last.code===429?'limit':'fail'}}
+const TERR={key:'المفتاح مش شغال. اتأكدي إنك نسختيه صح من إعداد المعلم الذكي',net:'مفيش نت أو التطبيق مش على الموبايل. المعلم الذكي محتاج إنترنت',limit:'وصلتي للحد المجاني حالياً. استني شوية وجربي تاني',fail:'حصلت مشكلة مؤقتة عند الخدمة. جربي تاني بعد شوية',empty:'المعلم ماردش. جربي تسألي بطريقة تانية'};
+const escH=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function tbub(m){const u=m.role==='user';return `<div class="dlg ${u?'me':'ot'}"><div class="av">${u?'👩':'🤖'}</div><div class="bub" data-nt="1" dir="auto" style="white-space:pre-wrap;${m.err?'color:var(--bad)':''}">${escH(m.text)}${(!u&&!m.err)?`<br><button class="sp" style="font-size:20px;padding:2px 6px" onclick="speak(this.parentNode.getAttribute('data-de'))" >🔊</button>`:''}</div></div>`.replace('class="bub" data-nt="1" dir="auto"','class="bub" data-nt="1" dir="auto" data-de="'+escH(m.text.split('\n')[0]).replace(/"/g,'&quot;')+'"')}
+function tutorHome(){if(!tutorHasKey())return tutorSetup();tutorChat()}
+function tutorChat(){stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>🤖 المعلم الذكي</b><button class="sp" onclick="TCH=[];render()">🗑</button></div>
+ <div id="tmsgs">${TCH.length?TCH.map(tbub).join(''):`<div class="card center">اكتبي أو قولي أي جملة بالألماني وهصححها لك. ممكن كمان تسألي عن أي قاعدة أو كلمة.</div>`}</div>
+ <div class="row" style="margin-top:8px"><input class="srch" id="tin" style="margin:0" placeholder="اكتبي بالألماني أو بالعربي"><button class="btn2" id="tmic" style="flex:0 0 56px">🎤</button><button class="btn" id="tsend" style="flex:0 0 84px">إرسال</button></div>
+ <p class="center" style="color:var(--mu);font-size:12px">الرسايل بتتبعت لجوجل عشان يرد المعلم. ماتكتبيش بيانات شخصية.</p>`;
+ const box=$('#tmsgs'),inp=$('#tin');
+ const send=async()=>{const t=inp.value.trim();if(!t||TBUSY)return;TBUSY=true;inp.value='';
+  if(!TCH.length)box.innerHTML='';TCH.push({role:'user',text:t});box.insertAdjacentHTML('beforeend',tbub(TCH[TCH.length-1]));
+  box.insertAdjacentHTML('beforeend','<div class="card center" id="twait">⏳</div>');window.scrollTo(0,document.body.scrollHeight);
+  const r=await tutorAsk();const w=$('#twait');if(w)w.remove();
+  const m=r.ok?{role:'model',text:r.text}:{role:'model',text:TERR[r.err]||TERR.fail,err:1};TCH.push(m);box.insertAdjacentHTML('beforeend',tbub(m));TBUSY=false;window.scrollTo(0,document.body.scrollHeight)};
+ $('#tsend').onclick=send;inp.onkeydown=e=>{if(e.key==='Enter')send()};
+ $('#tmic').onclick=()=>{window.onSpeechResult=t=>{inp.value=t;send()};window.onSpeechPartial=t=>{inp.value=t};window.onSpeechState=()=>{};window.onSpeechError=()=>{};window.onMicPermission=g=>{if(g==='1')startMic()};startMic()}};render()}
+function tutorSetup(){stack=()=>{const has=tutorHasKey();
+ $('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>🤖 المعلم الذكي</b><span></span></div>
+ <div class="card"><b>إزاي بيشتغل؟</b><p style="line-height:2;margin:6px 0 0">معلم ذكاء اصطناعي جوه التطبيق: بتكتبي أو بتتكلمي بالألماني وهو يصحح لك ويشرح. ده اختياري والتطبيق كله شغال من غيره.</p></div>
+ <div class="card"><b>إزاي تجيبي مفتاح مجاني؟</b><p style="line-height:2;margin:6px 0 0">1️⃣ افتحي الموقع من الزرار اللي تحت<br>2️⃣ سجّلي دخول بحساب جوجل بتاعك<br>3️⃣ اضغطي Create API key وانسخي المفتاح<br>4️⃣ الصقيه هنا واضغطي حفظ</p><button class="btn2" style="margin-top:8px" onclick="window.Android&&Android.openUrl?Android.openUrl('https://aistudio.google.com/apikey'):window.open('https://aistudio.google.com/apikey')">فتح موقع المفتاح (Google AI Studio)</button></div>
+ <div class="card"><b>مفتاحك</b><p style="color:var(--mu);font-size:14px;margin:6px 0">${has?'المفتاح محفوظ على موبايلك فقط ✅':'لسه مفيش مفتاح'}</p><input class="srch" id="tk" type="password" autocomplete="off" placeholder="الصقي المفتاح هنا"><button class="btn" id="tksave">حفظ المفتاح واختباره</button><div id="tkmsg"></div>${has?`<div style="height:8px"></div><button class="btn2" id="tkdel">حذف المفتاح</button><div style="height:8px"></div><button class="btn2" onclick="tutorChat()">ابدأ المحادثة</button>`:''}</div>
+ <div class="card"><b>النموذج (اختياري)</b><input class="srch" id="tmod" style="margin-top:8px" dir="ltr" placeholder="gemini-3.5-flash-lite" value="${escH(L.tmodel||'')}"><small style="color:var(--mu)">سيبيه فاضي للاختيار التلقائي</small></div>
+ <div class="card"><b>⚠️ مهم تعرفيه</b><p style="line-height:1.9;margin:6px 0 0">• المفتاح بيتخزن على موبايلك بس، ومش جوه التطبيق ولا بيتبعت لحد غير جوجل.<br>• الرسايل اللي بتكتبيها للمعلم بتتبعت لجوجل. في الباقة المجانية جوجل ممكن تستخدمها لتحسين منتجاتها، فماتكتبيش بيانات شخصية.<br>• الباقة المجانية ليها حدود استخدام، ولو خلصت المعلم هيقولك تستني.<br>• محتاج إنترنت. المعلم ممكن يغلط، فراجعي المهم.</p></div>`;
+ const msg=(t,ok)=>{$('#tkmsg').innerHTML=`<div class="msg ${ok?'ok':'bad'}">${t}</div>`};
+ $('#tmod').onchange=()=>{L.tmodel=$('#tmod').value.trim();save()};
+ $('#tksave').onclick=async()=>{const v=$('#tk').value.trim();if(v.length<20||/\s/.test(v)){msg('المفتاح شكله مش صح. انسخيه كامل من غير مسافات');return}
+  if(!(window.Android&&Android.tutorSaveKey)){msg('المعلم الذكي بيشتغل من تطبيق الموبايل بس');return}
+  L.tmodel=$('#tmod').value.trim();save();Android.tutorSaveKey(v);msg('⏳');const r=await tutorHttp('GET','/v1beta/models?pageSize=1','');
+  if(r.code===200){msg('المفتاح شغال ✅',1);setTimeout(()=>{stack=null;tutorChat()},900)}
+  else if(r.code===400||r.code===401||r.code===403){Android.tutorClearKey();msg(TERR.key)}
+  else if(r.code<=0){msg(TERR.net)}else{msg('المفتاح اتحفظ بس الخدمة ردت بمشكلة مؤقتة. جربي المحادثة بعد شوية',1)}};
+ if(has)$('#tkdel').onclick=()=>{Android.tutorClearKey();tutorSetup()}};render()}
+
 // خطاف لقطات للتطوير فقط
 const qp=new URLSearchParams(location.search);
 if(qp.get('demo')){Object.assign(L,{xp:1240,streak:12,goal:30,name:'سارة',placed:true,done:{1:3,2:3,3:2,4:2,5:1,6:1},hist:{}});const d=new Date();for(let k=6;k>=0;k--){const x=new Date(Date.now()-k*ONE);const key=x.getFullYear()+'-'+(x.getMonth()+1)+'-'+x.getDate();L.hist[key]=[40,25,60,30,45,20,55][6-k]}L.srs={'Hallo':{box:3,due:0},'Danke':{box:2,due:0},'eins':{box:1,due:0}};L.wrong={'Tschüss':2};render()}
 if(qp.get('shot')){const s=qp.get('shot');
- if(s==='unit')openUnit(1);else if(s==='quiz')quiz(UNITS[0]);else if(s==='talk')openDlg(1);else if(s==='dict'){tab='tools';dict()}else if(s==='conj'){tab='tools';conj()}else if(s==='me'){tab='me';render()}else if(s==='rev'){tab='rev';render()}else if(s==='speak')pronPractice(1);else if(s==='pron'){tab='tools';pronHome()}else if(s==='zero')zeroLesson(0);else if(s==='zh')zeroHome();else if(s==='video')vlPlay(0);else if(s==='vh')videoHome();else if(s==='tools'){tab='tools';render()}else if(s==='cert'){Object.keys(L.done);for(let i=1;i<=12;i++)L.done[i]=L.done[i]||2;showCert('A1')}}
+ if(s==='unit')openUnit(1);else if(s==='quiz')quiz(UNITS[0]);else if(s==='talk')openDlg(1);else if(s==='dict'){tab='tools';dict()}else if(s==='conj'){tab='tools';conj()}else if(s==='me'){tab='me';render()}else if(s==='rev'){tab='rev';render()}else if(s==='speak')pronPractice(1);else if(s==='pron'){tab='tools';pronHome()}else if(s==='zero')zeroLesson(0);else if(s==='zh')zeroHome();else if(s==='video')vlPlay(0);else if(s==='vh')videoHome();else if(s==='tools'){tab='tools';render()}else if(s==='tutor')tutorSetup();else if(s==='chat'){TCH=[{role:'user',text:'Ich bin müde'},{role:'model',text:'Gut! Du sagst: Ich bin müde. Das ist richtig.\nنطقك سليم، الجملة صح.'}];tutorChat()}else if(s==='cert'){Object.keys(L.done);for(let i=1;i<=12;i++)L.done[i]=L.done[i]||2;showCert('A1')}}
 </script></body></html>

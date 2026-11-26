@@ -1,0 +1,111 @@
+520|Befehl an eine Person: nur der Verbstamm: Komm! Sprich! Höflich mit Sie: Kommen Sie! Für mehrere Personen: Kommt!
+521|Supermarkt
+522|an der Kasse. die Packung. In Deutschland gibst du leere Flaschen zurück und bekommst Geld: das heißt der Pfand.
+539|Bank, Post und Ämter
+540|der Termin = ein offizieller Termin. Bei deutschen Ämtern braucht man meistens vorher einen Termin. unterschreiben.
+558|Handy und Technik
+559|anrufen ist ein trennbares Verb: Ich rufe dich an. aufladen: Ich lade mein Handy auf.
+577|Urlaub und Reisen
+578|in den Urlaub fahren. sich erholen. die Sehenswürdigkeit.
+596|Berufe
+597|Männliche Berufe haben der, weibliche die + Endung -in: der Lehrer → die Lehrerin. Nach sein sagt man den Beruf ohne Artikel: Ich bin Lehrerin.
+612|Möbel und Wohnung
+613|die Miete. mieten (ich will dort wohnen), vermieten (der Vermieter). der Vermieter = Besitzer der Wohnung.
+631|Tagesablauf
+632|Reflexive Verben haben sich: Ich ziehe mich an. Und aufstehen ist trennbar: Ich stehe um 7 auf.
+648|Feste und Feiertage
+649|Alles Gute zum Geburtstag. einladen ist trennbar: Ich lade dich ein. gratulieren + Dativ: Ich gratuliere dir.
+667|Die deutschen Buchstaben
+668|Buchstabennamen und ihre Aussprache
+669|Das deutsche Alphabet
+670|Deutsch benutzt dieselben Buchstaben wie Englisch (26) <b>+ 4 zusätzliche</b>: <span class='de'>ä ö ü ß</span><br>Das Schönste: Deutsch wird fast so gesprochen, wie es geschrieben wird. Wenn du die Laute der Buchstaben lernst, kannst du jedes Wort lesen.
+671|Buchstaben A bis G
+672|<span class='de'>A B C D E F G</span><br>Namen: a, be, ze, de, e, eff, ge.<br>Achtung: <span class='de'>C</span> heißt „ze“ und <span class='de'>G</span> heißt „ge“.
+673|H bis N
+674|<span class='de'>H I J K L M N</span><br>ha, i, jott, ka, ell, emm, enn.<br>Der Buchstabe <span class='de'>J</span> heißt „jott“ und klingt wie ein j: <span class='de'>ja</span>.
+675|O bis U
+676|<span class='de'>O P Q R S T U</span><br>o, pe, ku, err, ess, te, u.<br>Das <span class='de'>R</span> wird im Hals gebildet, am Wortanfang leicht.
+677|V bis Z
+678|<span class='de'>V W X Y Z</span><br>fau, we, iks, ypsilon, zett.<br>Der wichtigste Trick: <span class='de'>W</span> klingt wie ein englisches V, und <span class='de'>V</span> klingt meistens wie F!
+679|Die zusätzlichen Buchstaben
+680|<span class='de'>Ä Ö Ü ß</span><br>ä wie langes „e“: <span class='de'>Äpfel</span><br>ö mit gerundeten Lippen: <span class='de'>Öl</span><br>ü wie „i“ mit gerundeten Lippen: <span class='de'>über</span><br>ß ist ein Doppel-s, wie ss: <span class='de'>Straße</span>
+681|Hör zu und wähle den Buchstaben
+682|Be = der Buchstabe B. Pe = P und De = D.
+683|Ess = der Buchstabe S.
+684|Wie heißt dieser Buchstabe auf Deutsch?
+685|J heißt Jott und klingt wie j.
+686|Wie viele zusätzliche Buchstaben hat Deutsch im Vergleich zum Englischen?
+687|Vier: ä ö ü ß
+688|Besondere Laute
+689|ch, sch, sp, st und ei
+690|Der Laut sch
+691|<span class='de'>sch</span> klingt wie „sch“ in „Schule“:<br><span class='de'>Schule</span> = Ort zum Lernen<br><span class='de'>schön</span> = hübsch
+692|sp und st am Wortanfang
+693|Am Wortanfang:<br><span class='de'>sp</span> = schp: <span class='de'>sprechen</span> (schprechen)<br><span class='de'>st</span> = scht: <span class='de'>Stein</span> (schtein)
+694|Der Laut ch
+695|<span class='de'>ch</span> hat zwei Laute:<br>Nach i/e: leises Zischen, wie ein gehauchtes „h“: <span class='de'>ich</span><br>Nach a/o/u: wie das arabische „kh“: <span class='de'>Buch</span>
+696|ei, ie und eu
+697|<span class='de'>ei</span> = „ai“: <span class='de'>nein</span><br><span class='de'>ie</span> = langes „i“: <span class='de'>Liebe</span><br><span class='de'>eu / äu</span> = „oi“: <span class='de'>neu</span>
+698|Einfache, aber tückische Buchstaben
+699|<span class='de'>w</span> = w wie „v“: <span class='de'>wir</span><br><span class='de'>v</span> = meist „f“: <span class='de'>Vater</span><br><span class='de'>j</span> = „j“: <span class='de'>ja</span><br><span class='de'>z</span> = „ts“: <span class='de'>Zeit</span>
+700|Welcher Laut steckt im Wort schön?
+701|sch
+702|s
+703|ch
+704|dsch
+705|sch = „sch“, also „schön“.
+706|Hör zu: nein. Wie wird ei ausgesprochen?
+707|ai
+708|i
+709|oi
+710|o
+711|ei = „ai“, wie in nein.
+712|Wie wird der Buchstabe z ausgesprochen?
+713|s
+714|th
+715|z = „ts“, Zeit = „tsait“.
+716|Im Wort Buch: Wie wird das ch am Ende ausgesprochen?
+717|leichtes h
+718|k
+719|Nach u wird es wie „ch“ in „Buch“ gesprochen.
+720|Personalpronomen
+721|ich, du und wir: der erste Baustein
+722|Pronomen im Singular
+723|<span class='de'>ich</span> = Sprecher<br><span class='de'>du</span> = die angesprochene Person<br><span class='de'>er</span> = männlich<br><span class='de'>sie</span> = weiblich<br><span class='de'>es</span> = für Dinge (zum Beispiel: <span class='de'>das Kind</span>)
+724|Pronomen im Plural
+725|<span class='de'>wir</span> = wir<br><span class='de'>ihr</span> = ihr<br><span class='de'>sie</span> = sie<br><span class='de'>Sie</span> (immer großgeschrieben) = höfliche Anrede
+726|Ein lebendiges Beispiel
+727|<span class='de'>Ich bin Sara.</span><br><span class='de'>Du bist Lena.</span><br><span class='de'>Wir sind Freunde.</span><br>Das Verb ändert sich mit jedem Pronomen. Das lernen wir in der nächsten Lektion.
+728|Was bedeutet wir?
+729|ihr
+730|sie (Plural)
+731|wir = wir.
+732|Wie sagt man „sie“ (weiblich)?
+733|sie = eine Frau. Dasselbe Wort sie = mehrere Personen. Der Zusammenhang zeigt es.
+734|Sie mit großem S bedeutet:
+735|höfliche Anrede
+736|du
+737|Das höfliche Sie wird immer großgeschrieben, auch mitten im Satz.
+738|Das passende Pronomen für das Kind:
+739|das Kind ist neutral, also benutzen wir es.
+740|Deine ersten Sätze
+741|Stelle dich in 5 Sätzen vor
+742|Dein Name
+743|<span class='de'>Ich heiße Sara.</span><br>Setze deinen Namen statt Sara ein. heißen = einen Namen haben.
+744|Wie es dir geht / was du machst
+745|<span class='de'>Ich bin Studentin.</span><br><span class='de'>Ich bin müde.</span><br>Nach bin steht ein Adjektiv oder ein Beruf ohne Artikel.
+746|Dein Land
+747|<span class='de'>Ich komme aus Ägypten.</span><br>kommen aus + Land.
+748|Wo du wohnst
+749|<span class='de'>Ich wohne in Kairo.</span><br>wohnen in + Stadt.
+750|Was machst du gerade 😉
+751|<span class='de'>Ich lerne Deutsch.</span><br>Und es stimmt! Sag es mit Stolz.
+752|Wie sagt man „Ich komme aus Ägypten“?
+753|kommen aus + Land.
+754|Ich bin Studentin bedeutet:
+755|Ich bin Lehrerin
+756|Ich bin müde
+757|Studentin = eine Frau, die an der Universität studiert.
+758|Wie sagt man „Ich lerne Deutsch“?
+759|lernen = Wissen aufnehmen, sprechen = reden.
+519|Imperativ

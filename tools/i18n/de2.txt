@@ -1,0 +1,36 @@
+263|Reisen und Hotel
+264|abfahren = losfahren (Verkehrsmittel), ankommen = ankommen. Diese Verben sind trennbar: Der Zug fährt um 8 ab.
+278|Gesundheit und Körper
+279|Mir tut der Kopf weh. Gute Besserung! Der Termin beim Arzt: der Termin.
+296|Arbeit und Studium
+297|Ich arbeite als ... Ich studiere an der Universität. die Prüfung.
+314|Hobbys und Sport
+315|gern nach dem Verb bedeutet „ich mache es gern“: Ich spiele gern Fußball.
+332|Wetter und Jahreszeiten
+333|Es regnet. Es ist sonnig. Mir ist kalt. Alle Jahreszeiten sind der.
+350|Kleidung
+351|anziehen (trennbares Verb): Ich ziehe die Jacke an. gefallen: Das Kleid gefällt mir.
+367|Gefühle und Beziehungen
+368|sich freuen: Ich freue mich. vermissen: Ich vermisse dich.
+393|Im Café
+402|Auf dem Markt
+411|Nach dem Weg fragen
+420|Beim Arzt
+429|Ein Hotelzimmer buchen
+438|Vorstellungsgespräch
+447|Wohnung zur Miete
+456|Am Bahnhof
+505|Modalverben
+506|können, müssen, wollen, dürfen, sollen, mögen. Das Modalverb steht an zweiter Stelle, das Hauptverb geht im Infinitiv ans Ende: Ich will Deutsch lernen.
+507|Trennbare Verben
+508|Verben wie ankommen, abfahren und anziehen werden beim Konjugieren getrennt: Der erste Teil geht ans Satzende. Der Zug kommt um 9 an. Im Infinitiv sind sie wieder ein Wort.
+509|weil und dass
+510|Nach weil und dass geht das Verb ans Satzende: Ich lerne Deutsch, weil ich in Deutschland arbeiten will.
+511|Vergangenheit von sein und haben
+512|Im Alltag: war: ich war, du warst, er war, wir waren. Und hatte: ich hatte, du hattest. Bei anderen Verben benutze das Perfekt: Ich habe gelernt.
+513|Steigerung
+514|schnell → schneller → am schnellsten. gut → besser → am besten. viel → mehr → am meisten. Für „als“ im Vergleich: Ich bin älter als du.
+515|Wichtige Präpositionen
+516|Immer mit Akkusativ: für, ohne, gegen, durch. Immer mit Dativ: mit, zu, bei, von, nach, aus. Beide Fälle: in, an, auf. Wo? = Dativ, Wohin? = Akkusativ: Ich bin in der Schule / Ich gehe in die Schule.
+517|Reflexive Verben
+518|Verben wie sich freuen und sich anziehen brauchen ein Reflexivpronomen: ich → mich, du → dich, er/sie → sich. Beispiel: Ich freue mich, Ziehst du dich an? Das Reflexivpronomen steht direkt nach dem Verb.

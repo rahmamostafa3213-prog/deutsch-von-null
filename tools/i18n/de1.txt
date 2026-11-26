@@ -1,0 +1,58 @@
+0|Begrüßungen
+1|Hallo = Hallo (immer). Guten Morgen für den Morgen, Guten Tag für tagsüber, Guten Abend für den Abend. Im Deutschen werden alle Nomen großgeschrieben.
+17|Sich kennenlernen
+18|ich bin = ich bin. du bist = du bist. er/sie ist = er/sie ist. Das Verb ändert sich mit dem Pronomen: ich heiße, du heißt.
+34|Zahlen 0–20
+35|13 bis 19 enden auf zehn, zum Beispiel sechzehn. Ab 21 sagt man im Deutschen zuerst die Einer: einundzwanzig.
+53|Familie
+54|Nomen haben 3 Genera: der (maskulin), die (feminin), das (neutral). Lerne das Wort immer mit dem Artikel. Der Plural ist meistens die.
+69|Essen und Trinken
+70|Ich möchte = höfliche Form von „ich will“. ich esse, ich trinke. Zur Verneinung benutze nicht oder kein.
+89|Farben
+90|Ein Adjektiv nach sein bleibt unverändert: Das Auto ist rot. Vor einem Nomen bekommt es eine Endung: ein rotes Auto.
+106|Das Haus
+107|Es gibt = es ist vorhanden. Es gibt ein Bett. Und wohnen: Ich wohne in Kairo.
+122|Tage und Monate
+123|Alle Wochentage sind maskulin (der). „Am Montag“ sagt man am Montag. „Im Januar“ = im Januar.
+140|Stadt und Verkehr
+141|nach = in eine Stadt/ein Land: Ich fahre nach Kairo. Bei festen Orten: zum Bahnhof.
+157|Einkaufen
+158|Wie viel kostet das? Der Plural wird auf verschiedene Arten gebildet (der Apfel → die Äpfel). Lerne den Plural mit dem Wort.
+175|Wichtige Verben
+176|Im normalen Satz steht das Verb immer an zweiter Stelle: Ich lerne heute Deutsch. Heute lerne ich Deutsch. Endungen: ich -e, du -st, er/sie -t, wir -en.
+195|Zeit und Adjektive
+196|Wie spät ist es? Es ist drei Uhr. viertel nach, halb (aber halb drei = zwei Uhr dreißig!).
+215|Wie ein langes „e“ (zwischen a und e)
+216|Wie „ü“: Lippen gerundet, dabei „i“ sagen
+217|Lippen runden und „i“ sagen
+218|Doppel-s (ss)
+219|Nach i/e: leises Zischen. Nach a/o/u: wie das arabische „kh“
+220|Wie „sch“
+221|Am Wortanfang: „scht“
+222|Am Wortanfang: „schp“
+223|„ts“
+224|Wie das englische v
+225|Meistens wie f
+226|Wie j
+227|Vor einem Vokal: z
+228|Wie „ai“
+229|Langes „i“
+230|Wie „eu“
+231|Nomen und der Artikel
+232|Jedes Nomen hat ein Genus: der (maskulin) die (feminin) das (neutral). Es gibt keine feste Regel, also lerne das Nomen mit dem Artikel. Der Plural ist immer die. Beispiele: der Tisch, die Lampe, das Haus.
+233|Pronomen und Konjugation
+234|ich -e | du -st | er/sie/es -t | wir -en | ihr -t | sie/Sie -en. Beispiel lernen: ich lerne, du lernst, er lernt, wir lernen.
+235|sein und haben
+236|sein: ich bin, du bist, er ist, wir sind, ihr seid, sie sind. haben: ich habe, du hast, er hat, wir haben, ihr habt, sie haben.
+237|Satzstellung
+238|Das Verb steht immer an zweiter Stelle: Ich lerne heute Deutsch. / Heute lerne ich Deutsch. Frage mit Fragewort: Wo wohnst du? Ja/Nein-Frage: Verb zuerst: Wohnst du hier?
+239|Verneinung
+240|nicht verneint das Verb oder das Adjektiv: Ich komme nicht. kein verneint das Nomen: Ich habe kein Auto.
+241|Fälle
+242|Nominativ für das Subjekt, Akkusativ für das Objekt: der → den (Ich sehe den Mann), die und das ändern sich nicht. Dativ nach mit, zu und bei: dem / der / dem.
+243|Perfekt
+244|haben/sein + Partizip II: Ich habe gelernt. Ich bin gegangen. Bei regelmäßigen Verben ge- + Stamm + t: gemacht.
+245|Plural
+246|Muster: -e (Tag→Tage), -n (Frau→Frauen), -er (Kind→Kinder), Umlaut (Apfel→Äpfel), -s (Auto→Autos). Lerne den Plural mit dem Wort.
+247|Im Restaurant und Café
+248|Ich hätte gern = höflich (besser als ich will). Die Rechnung, bitte. Das Trinkgeld heißt Trinkgeld.

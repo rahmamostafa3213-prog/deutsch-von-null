@@ -1,0 +1,229 @@
+0|German from zero|Deutsch von Null
+1|Home|Start
+2|Review|Wiederholen
+3|Dialogues|Gespräche
+4|Tools|Werkzeuge
+5|Me|Ich
+6|days|Tage
+7|points|Punkte
+8|Finish the previous unit first|Schließe zuerst die vorherige Einheit ab
+9|words|Wörter
+10|sentences|Sätze
+11|Welcome|Willkommen
+12||
+13|You completed|Du hast
+14|of|von
+15|units. Keep up the energy|Einheiten abgeschlossen. Bleib dran
+16|Placement test|Einstufungstest
+17|If you already know some German, take the test and unlock units at your level instead of starting from zero|Wenn du schon etwas Deutsch kannst, mach den Test und schalte Einheiten auf deinem Niveau frei, statt bei Null anzufangen
+18|Start from zero|Von Null anfangen
+19|A simple path: letters and sounds with audio, pronouns, and first sentences, step by step|Ein einfacher Weg: Buchstaben und Laute mit Ton, Pronomen und erste Sätze, Schritt für Schritt
+20|Video lessons with voice|Videolektionen mit Ton
+21|Designed explanations from zero: from the letters to sentence order|Gestaltete Erklärungen von Null: von den Buchstaben bis zur Satzstellung
+22|Level 1|Stufe 1
+23|Basics|Grundlagen
+24|Level 2|Stufe 2
+25|Progress|Fortschritt
+26|Extra: vocabulary expansion|Zusatz: Wortschatz erweitern
+27|Tap to see the meaning|Tippe, um die Bedeutung zu sehen
+28|Previous|Zurück
+29|Next|Weiter
+30|Start the exercise|Übung starten
+31|Listening mode|Hörmodus
+32|Matching game|Zuordnungsspiel
+33|Pronunciation practice with the microphone|Ausspracheübung mit dem Mikrofon
+34|Tip|Tipp
+35|sentence|Satz
+36|Stop listening|Hören beenden
+37|Bravo! You finished in|Bravo! Geschafft in
+38|moves and earned|Zügen und du hast
+39|OK|OK
+40|Match|Zuordnen
+41|Match each German word with its meaning|Ordne jedes deutsche Wort seiner Bedeutung zu
+42|Translate|Übersetzen
+43|Check|Prüfen
+44|Choose the missing word|Wähle das fehlende Wort
+45|What does it mean:|Was bedeutet:
+46|How do you say|Wie sagt man
+47|Listen and choose the meaning|Hör zu und wähle die Bedeutung
+48|Correct|Richtig
+49|Wrong|Falsch
+50|Result|Ergebnis
+51|Correct answer|Richtige Antwort
+52|You earned|Du hast
+53|You need|Du brauchst
+54|at least to pass. Try again|mindestens, um zu bestehen. Versuche es noch einmal
+55|Back to the path|Zurück zum Pfad
+56|Redo the exercise|Übung wiederholen
+57|Pronunciation practice|Ausspracheübung
+58|No German voice is installed on this phone, so the model voice won't sound right. Download it from the tab|Auf diesem Handy ist keine deutsche Stimme installiert, deshalb klingt die Vorbild-Stimme nicht richtig. Lade sie im Tab
+59|German pronunciation voice|Deutsche Aussprache-Stimme
+60|How does it work|So funktioniert es
+61|Listen to the word or sentence with the button|Höre das Wort oder den Satz mit der Taste
+62|or slowly|oder langsam
+63|Tap|Tippe auf
+64|and say it yourself|und sprich es selbst
+65|The app listens and gives you a similarity score of your pronunciation against the model, out of|Die App hört zu und gibt dir einen Ähnlichkeitswert deiner Aussprache im Vergleich zum Vorbild, von
+66|Tips for a higher score|Tipps für einen höheren Wert
+67|Speak clearly in a quiet place|Sprich deutlich an einem ruhigen Ort
+68|Split long words into syllables|Teile lange Wörter in Silben
+69|Repeat after the model|Sprich dem Vorbild nach
+70|times before recording|Mal vor der Aufnahme
+71|Start practice|Übung starten
+72|Pronunciation practice works only in the phone app, not in the browser|Die Ausspracheübung funktioniert nur in der Handy-App, nicht im Browser
+73|Your average pronunciation|Deine durchschnittliche Aussprache
+74|Your pronunciation is excellent! Keep going|Deine Aussprache ist ausgezeichnet! Weiter so
+75|Very good. Listen to the model and repeat the ones that scored below|Sehr gut. Höre das Vorbild und wiederhole die Wörter mit weniger als
+76|Listen to the model slowly|Höre das Vorbild langsam
+77|and repeat after it, then try again|sprich es nach und versuche es noch einmal
+78|Another round|Noch eine Runde
+79|That's enough|Das reicht
+80|Tap and speak|Tippe und sprich
+81|Listening to you|Ich höre zu
+82|Excellent! Your pronunciation|Ausgezeichnet! Deine Aussprache
+83|Good|Gut
+84|I heard|Ich habe gehört
+85|Listen to the model and try again|Höre das Vorbild und versuche es noch einmal
+86|Try again|Versuche es noch einmal
+87|The microphone works only from the app on the phone|Das Mikrofon funktioniert nur in der App auf dem Handy
+88|Evaluating your pronunciation|Deine Aussprache wird bewertet
+89|Microphone permission is needed. Enable it in the app settings|Die Mikrofonerlaubnis wird benötigt. Aktiviere sie in den App-Einstellungen
+90|I didn't hear anything clear. Try in a quiet place and bring the phone closer|Ich habe nichts Klares gehört. Versuche es an einem ruhigen Ort und halte das Handy näher
+91|The recognition service needs internet the first time. Connect and try again|Der Erkennungsdienst braucht beim ersten Mal Internet. Verbinde dich und versuche es noch einmal
+92|Network problem. Speech recognition needs internet on your phone|Netzwerkproblem. Die Spracherkennung braucht Internet auf deinem Handy
+93|Speech recognition is not available on this phone|Die Spracherkennung ist auf diesem Handy nicht verfügbar
+94|The microphone is busy. Close other apps and try again|Das Mikrofon ist belegt. Schließe andere Apps und versuche es noch einmal
+95|There was a microphone problem. Try again|Es gab ein Mikrofonproblem. Versuche es noch einmal
+96|Without microphone permission I can't hear you. Enable it in the app settings and come back here|Ohne Mikrofonerlaubnis kann ich dich nicht hören. Aktiviere sie in den App-Einstellungen und komm zurück
+97|A simple path from zero: letters with sound, sounds, pronouns, and first sentences. Each lesson is a short explanation followed by review questions|Ein einfacher Weg von Null: Buchstaben mit Ton, Laute, Pronomen und erste Sätze. Jede Lektion ist eine kurze Erklärung mit Wiederholungsfragen
+98|You finished|Du hast
+99|You finished the lesson|Du hast die Lektion abgeschlossen
+100|points|Punkte
+101|The next lesson is waiting for you|Die nächste Lektion wartet auf dich
+102|You finished the whole zero path. You're ready for the units|Du hast den ganzen Null-Pfad abgeschlossen. Du bist bereit für die Einheiten
+103|Next lesson|Nächste Lektion
+104|Got it, continue|Verstanden, weiter
+105|Continue|Weiter
+106|Video lessons|Videolektionen
+107|lessons|Lektionen
+108|Designed explainer videos with animated graphics and voiceover: explanation in Arabic and clear German pronunciation, from the first letters to sentence order. They work fully offline|Gestaltete Erklärvideos mit animierter Grafik und Sprecher: Erklärung auf Arabisch und klare deutsche Aussprache, von den ersten Buchstaben bis zur Satzstellung. Sie funktionieren komplett offline
+109|Watched|Gesehen
+110|Designed explainer video with animated graphics and voiceover: Arabic explanation and German pronunciation, fully offline|Gestaltetes Erklärvideo mit animierter Grafik und Sprecher: arabische Erklärung und deutsche Aussprache, komplett offline
+111|Play video|Video abspielen
+112|Smart review|Intelligente Wiederholung
+113|words due for review today|Wörter heute zur Wiederholung fällig
+114|Total words you've learned|Alle Wörter, die du gelernt hast
+115|Start review|Wiederholung starten
+116|You finished today's review|Du hast die heutige Wiederholung abgeschlossen
+117|Finish a unit exercise first and its words will appear here|Schließe zuerst eine Einheit ab, dann erscheinen ihre Wörter hier
+118|Words that are hard for you|Wörter, die dir schwerfallen
+119|words you got wrong before. Focus on them|Wörter, bei denen du dich schon vertan hast. Konzentriere dich darauf
+120|Hard words|Schwere Wörter
+121|Real dialogues|Echte Gespräche
+122|Listen to the dialogue, then switch roles and answer yourself|Höre das Gespräch, dann tausche die Rollen und antworte selbst
+123|Play|Abspielen
+124|Role play|Rollenspiel
+125|You|Du
+126|Play all|Alles abspielen
+127|Play your part|Spiele deine Rolle
+128|The other person|Die andere Person
+129|Stop|Stopp
+130|You played the whole part|Du hast die ganze Rolle gespielt
+131|Review the dialogue and try again|Wiederhole das Gespräch und versuche es noch einmal
+132|How do you reply?|Wie antwortest du?
+133|Correct reply|Richtige Antwort
+134|Tools|Werkzeuge
+135|Letters, sounds and basics, step by step|Buchstaben, Laute und Grundlagen, Schritt für Schritt
+136|Audio explanation for every point from the start of the language|Erklärung mit Ton für jeden Punkt von Anfang an
+137|Say the sentence and the app listens and rates your pronunciation|Sprich den Satz, die App hört zu und bewertet deine Aussprache
+138|Dictionary|Wörterbuch
+139|Search all words and sentences in the app|Durchsuche alle Wörter und Sätze der App
+140|Verb conjugation|Verben konjugieren
+141|The most important verbs conjugated with examples and audio|Die wichtigsten Verben konjugiert, mit Beispielen und Ton
+142|Pronunciation and letters|Aussprache und Buchstaben
+143|The alphabet and the special German sounds|Das Alphabet und die besonderen deutschen Laute
+144|Simple grammar|Einfache Grammatik
+145|and|und
+146|explained simply|einfach erklärt
+147|Unlock units at your level|Schalte Einheiten auf deinem Niveau frei
+148|My certificate|Mein Zertifikat
+149|The completion certificate for both levels is ready|Das Abschlusszertifikat für beide Stufen ist bereit
+150|Completion certificate|Abschlusszertifikat
+151|ready|bereit
+152|Finish the units and get your certificate|Schließe die Einheiten ab und hol dir dein Zertifikat
+153|Type in German or Arabic|Schreibe auf Deutsch oder Arabisch
+154|No results for|Keine Ergebnisse für
+155|Type in the search box to reach any word quickly|Schreibe in die Suche, um schnell jedes Wort zu finden
+156|verb|Verb
+157|Present tense|Präsens
+158|Tap any sound to hear an example|Tippe auf einen Laut, um ein Beispiel zu hören
+159|Alphabet|Alphabet
+160|Listen to the alphabet|Höre das Alphabet
+161|Basics|Grundlagen
+162|Placement|Einstufung
+163|Your level is clearly good! We unlocked the first|Dein Niveau ist offenbar gut! Wir haben die ersten
+164|units with one star. Start from unit|Einheiten mit einem Stern freigeschaltet. Beginne bei Einheit
+165|and continue|und mach weiter
+166|It's best to start from the first unit and build your foundation step by step. Let's go|Am besten beginnst du bei der ersten Einheit und baust dein Fundament Schritt für Schritt auf. Los geht's
+167|Start learning|Mit dem Lernen beginnen
+168|Your name on the certificate|Dein Name auf dem Zertifikat
+169|Type your name|Schreibe deinen Namen
+170|Save name|Namen speichern
+171|Level 1 certificate|Zertifikat Stufe 1
+172|Congratulations! You finished all units of|Glückwunsch! Du hast alle Einheiten abgeschlossen:
+173|units|Einheiten
+174|Show certificate|Zertifikat anzeigen
+175|Certificate for both levels|Zertifikat für beide Stufen
+176|Legendary! You finished the whole app|Legendär! Du hast die ganze App abgeschlossen
+177|German champion|Deutsch-Champion
+178|Your certificate|Dein Zertifikat
+179|Save the certificate to Photos|Zertifikat in den Fotos speichern
+180|Or take a screenshot and share it|Oder mache einen Screenshot und teile ihn
+181|App|App
+182|certifies that|bescheinigt, dass
+183|successfully completed all lessons and exercises of level|alle Lektionen und Übungen der Stufe erfolgreich abgeschlossen hat:
+184|German language basics|Grundlagen der deutschen Sprache
+185|German language basics and progress|Grundlagen und Fortschritt der deutschen Sprache
+186|Date:|Datum:
+187|There was a problem saving. Try a screenshot|Beim Speichern ist ein Problem aufgetreten. Versuche es mit einem Screenshot
+188|In the browser: take a screenshot of the certificate. In the app it saves straight to Photos|Im Browser: Mache einen Screenshot des Zertifikats. In der App wird es direkt in den Fotos gespeichert
+189|Beginner|Anfänger
+190|Enthusiast|Enthusiastin
+191|Hard worker|Fleißig
+192|Advanced|Fortgeschritten
+193|Expert|Profi
+194|Your level|Dein Niveau
+195|You reached the top level|Du hast die höchste Stufe erreicht
+196|Remaining:|Noch
+197|points to the next level|Punkte bis zur nächsten Stufe
+198|Recent activity|Letzte Aktivität
+199|days|Tage
+200|Statistics|Statistik
+201|Completed units|Abgeschlossene Einheiten
+202|Words you've mastered|Wörter, die du beherrschst
+203|Words in review|Wörter in der Wiederholung
+204|Longest streak of days|Längste Tagesserie
+205|Daily goal (points|Tagesziel (Punkte
+206|Your name (shown on the certificate|Dein Name (wird auf dem Zertifikat angezeigt
+207|Your name|Dein Name
+208|Save|Speichern
+209|Dark mode|Dunkelmodus
+210|Installed and working|Installiert und funktioniert
+211|Not installed on this phone|Auf diesem Handy nicht installiert
+212|Pronunciation won't work properly without it|Ohne sie funktioniert die Aussprache nicht richtig
+213|Open sound settings to download German|Soundeinstellungen öffnen, um Deutsch herunterzuladen
+214|Free resources to complement it|Kostenlose Quellen zur Ergänzung
+215|on YouTube|auf YouTube
+216|for reviewing words|zum Wiederholen von Wörtern
+217|Erase all progress?|Den gesamten Fortschritt löschen?
+218|Erase progress|Fortschritt löschen
+219|Design: Waleed Ahmed's wife|Design: Ehefrau von Waleed Ahmed
+220|Version|Version
+221|Completely free and works without internet|Völlig kostenlos und funktioniert ohne Internet
+222|Sun|So
+223|Mon|Mo
+224|Tue|Di
+225|Wed|Mi
+226|Thu|Do
+227|Fri|Fr
+228|Sat|Sa

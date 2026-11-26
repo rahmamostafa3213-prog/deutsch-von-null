@@ -24,7 +24,13 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import org.json.JSONObject;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
@@ -40,6 +46,7 @@ public class MainActivity extends Activity {
     private String pendingName = null;
     private SpeechRecognizer rec = null;
     private boolean listening = false;
+    private String uiLang = "ar";
     private final Handler ui = new Handler(Looper.getMainLooper());
 
     @Override
@@ -138,6 +145,80 @@ public class MainActivity extends Activity {
             });
         }
 
+
+        @JavascriptInterface
+        public void setLang(String l) { if ("en".equals(l) || "de".equals(l) || "ar".equals(l)) uiLang = l; }
+
+        @JavascriptInterface
+        public void openUrl(String u) {
+            try {
+                if (u != null && u.startsWith("https://aistudio.google.com/")) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(u)));
+                }
+            } catch (Exception ignored) {}
+        }
+
+        @JavascriptInterface
+        public boolean tutorHasKey() { return readKey() != null; }
+
+        @JavascriptInterface
+        public void tutorSaveKey(String k) {
+            try {
+                File f = new File(getNoBackupFilesDir(), "tk");
+                FileOutputStream o = new FileOutputStream(f);
+                o.write(k.trim().getBytes("UTF-8"));
+                o.close();
+            } catch (Exception ignored) {}
+        }
+
+        @JavascriptInterface
+        public void tutorClearKey() {
+            try { new File(getNoBackupFilesDir(), "tk").delete(); } catch (Exception ignored) {}
+        }
+
+        // The key never reaches JavaScript: the request is made here and only the response is returned.
+        @JavascriptInterface
+        public void tutorHttp(final String id, final String method, final String path, final String body) {
+            new Thread(() -> {
+                int code = -1;
+                String resp = "";
+                try {
+                    String key = readKey();
+                    if (key == null || path == null || !path.startsWith("/v1beta/models")) throw new Exception("bad");
+                    HttpURLConnection c = (HttpURLConnection) new URL("https://generativelanguage.googleapis.com" + path).openConnection();
+                    c.setConnectTimeout(15000);
+                    c.setReadTimeout(60000);
+                    c.setRequestMethod("POST".equals(method) ? "POST" : "GET");
+                    c.setRequestProperty("x-goog-api-key", key);
+                    c.setRequestProperty("Content-Type", "application/json");
+                    if ("POST".equals(method)) {
+                        c.setDoOutput(true);
+                        OutputStream o = c.getOutputStream();
+                        o.write(body.getBytes("UTF-8"));
+                        o.close();
+                    }
+                    code = c.getResponseCode();
+                    InputStream in = code >= 400 ? c.getErrorStream() : c.getInputStream();
+                    if (in != null) {
+                        BufferedReader r = new BufferedReader(new InputStreamReader(in, "UTF-8"));
+                        StringBuilder sb = new StringBuilder();
+                        String ln;
+                        while ((ln = r.readLine()) != null) sb.append(ln).append('\n');
+                        resp = sb.toString();
+                    }
+                } catch (Exception e) {
+                    code = -1;
+                }
+                try {
+                    JSONObject j = new JSONObject();
+                    j.put("id", id);
+                    j.put("code", code);
+                    j.put("body", resp);
+                    jsCallback("onTutorResult", j.toString());
+                } catch (Exception ignored) {}
+            }).start();
+        }
+
         @JavascriptInterface
         public void shareText(String t) {
             Intent i = new Intent(Intent.ACTION_SEND);
@@ -157,6 +238,19 @@ public class MainActivity extends Activity {
             }
             return doSave(dataUrl, name);
         }
+    }
+
+    private String readKey() {
+        try {
+            File f = new File(getNoBackupFilesDir(), "tk");
+            if (!f.exists()) return null;
+            java.io.FileInputStream in = new java.io.FileInputStream(f);
+            byte[] b = new byte[(int) f.length()];
+            int n = in.read(b);
+            in.close();
+            String k = new String(b, 0, Math.max(n, 0), "UTF-8").trim();
+            return k.length() > 10 ? k : null;
+        } catch (Exception e) { return null; }
     }
 
     private void startListeningUi() {
@@ -224,7 +318,7 @@ public class MainActivity extends Activity {
                 o.close();
                 android.media.MediaScannerConnection.scanFile(this, new String[]{f.getPath()}, null, null);
             }
-            runOnUiThread(() -> Toast.makeText(this, "اتحفظت في الصور ✅", Toast.LENGTH_LONG).show());
+            runOnUiThread(() -> Toast.makeText(this, "en".equals(uiLang) ? "Saved to Photos ✅" : "de".equals(uiLang) ? "In den Fotos gespeichert ✅" : "اتحفظت في الصور ✅", Toast.LENGTH_LONG).show());
             return "OK";
         } catch (Exception e) {
             return "ERR:" + e.getMessage();

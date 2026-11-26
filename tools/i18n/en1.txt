@@ -1,0 +1,260 @@
+0|Greetings
+1|Hallo = hello (any time). Guten Morgen for morning, Guten Tag for daytime, Guten Abend for evening. In German all nouns start with a capital letter.
+2|Hello
+3|Good morning
+4|Have a nice day
+5|Good evening
+6|Good night
+7|Goodbye
+8|Goodbye (formal)
+9|See you soon
+10|Thank you
+11|You're welcome / please
+12|Yes
+13|No
+14|Good morning, how are you?
+15|I'm fine, thank you
+16|See you tomorrow
+17|Getting to know each other
+18|ich bin = I am. du bist = you are. er/sie ist = he/she is. The verb changes with the pronoun: ich heiße, du heißt.
+19|I
+20|you
+21|he
+22|she
+23|we
+24|What's your name?
+25|My name is ...
+26|Where are you from?
+27|I'm from Egypt
+28|Nice to meet you
+29|I speak Arabic
+30|Sorry / excuse me
+31|My name is Rahma
+32|I'm learning German
+33|I'm a student
+34|Numbers 0-20
+35|13 to 19 end in zehn (ten), like sechzehn. From 21 on, German says the units first: einundzwanzig = one and twenty.
+36|zero
+37|one
+38|two
+39|three
+40|four
+41|five
+42|six
+43|seven
+44|eight
+45|nine
+46|ten
+47|eleven
+48|twelve
+49|twenty
+50|I'm twenty years old
+51|That costs five euros
+52|My number is zero one
+53|Family
+54|Nouns have 3 genders: der (masculine), die (feminine), das (neuter). Always learn the word with its artikel. The plural is mostly die.
+55|mother
+56|father
+57|brother
+58|sister
+59|child
+60|son
+61|daughter / girl
+62|grandmother
+63|grandfather
+64|friend (male)
+65|friend (female)
+66|This is mum
+67|I have a brother
+68|My family is big
+69|Food and drink
+70|Ich möchte = I would like (polite). ich esse = I eat, ich trinke = I drink. For negation use nicht or kein.
+71|water
+72|bread
+73|coffee
+74|tea
+75|milk
+76|apple
+77|meat
+78|chicken
+79|rice
+80|cheese
+81|egg
+82|food
+83|hunger
+84|thirst
+85|I'd like tea, please
+86|I'm hungry
+87|This tastes sweet
+88|The bill, please
+89|Colors
+90|An adjective after sein does not change: Das Auto ist rot. Before a noun it takes an ending: ein rotes Auto.
+91|red
+92|blue
+93|green
+94|yellow
+95|black
+96|white
+97|gray
+98|brown
+99|orange
+100|pink
+101|purple
+102|color
+103|The sky is blue
+104|I like green
+105|What color is this?
+106|The house
+107|Es gibt = there is. Es gibt ein Bett = there is a bed. And wohnen = to live: Ich wohne in Kairo.
+108|apartment
+109|room
+110|kitchen
+111|bathroom
+112|bed
+113|table
+114|chair
+115|door
+116|window
+117|key
+118|lamp
+119|I live in Cairo
+120|The kitchen is small
+121|Where is the bathroom?
+122|Days and months
+123|All days of the week are masculine (der). To say "on Monday" we say am Montag. "In January" = im Januar.
+124|Monday
+125|Tuesday
+126|Wednesday
+127|Thursday
+128|Friday
+129|Saturday
+130|Sunday
+131|today
+132|tomorrow
+133|yesterday
+134|month
+135|year
+136|week
+137|Today is Wednesday
+138|Tomorrow I have time
+139|On Friday I study German
+140|City and transport
+141|nach = to (city/country): Ich fahre nach Kairo. With fixed places: zum Bahnhof = to the train station.
+142|city
+143|street
+144|train station
+145|bus
+146|train
+147|car
+148|taxi
+149|airport
+150|left
+151|right
+152|straight ahead
+153|bus stop
+154|Where is the train station?
+155|Go straight ahead
+156|I take the bus
+157|Shopping
+158|Wie viel kostet das? = how much is this? Plurals are formed in different ways (der Apfel → die Äpfel), so learn the plural with the word.
+159|market
+160|shop
+161|money
+162|price
+163|expensive
+164|cheap
+165|to buy
+166|to pay
+167|bag
+168|dress
+169|shoes
+170|open / closed
+171|How much is this?
+172|This is very expensive
+173|I'll take this
+174|Can I pay by card?
+175|Basic verbs
+176|In a normal sentence the verb is always in second position: Ich lerne heute Deutsch. Heute lerne ich Deutsch. Verb endings: ich -e, du -st, er/sie -t, wir -en.
+177|to be
+178|to have
+179|to go
+180|to come
+181|to do / make
+182|to learn
+183|to speak
+184|to eat
+185|to drink
+186|to sleep
+187|to read
+188|to write
+189|to work
+190|to understand
+191|I learn German every day
+192|Do you speak English?
+193|I don't understand
+194|Please speak slowly
+195|Time and adjectives
+196|Wie spät ist es? = what time is it? Es ist drei Uhr = it's three o'clock. viertel nach = quarter past, halb = half to (but in German halb drei = half past two!).
+197|clock / o'clock
+198|hour (duration)
+199|minute
+200|early
+201|late
+202|big
+203|small
+204|good
+205|bad
+206|new
+207|old
+208|beautiful / sweet
+209|fast
+210|slow
+211|What time is it?
+212|It's half past two
+213|This is very beautiful
+214|I'm late
+215|Like a long "e" (between a and e)
+216|Like "u" in "fur" with rounded lips, say "ee"
+217|Round your lips and say "ee"
+218|A double s (ss)
+219|After i/e: a soft hiss. After a/o/u: like the Arabic kh
+220|Like "sh"
+221|At the start of a word: "sht"
+222|At the start of a word: "shp"
+223|"ts"
+224|Like English v
+225|Usually like f
+226|Like y
+227|Before a vowel: z
+228|Like "eye"
+229|Long "ee"
+230|Like "oy"
+231|Nouns and the artikel
+232|Every noun has a gender: der (masculine) die (feminine) das (neuter). There is no fixed rule, so learn the noun with its artikel. The plural is always die. Examples: der Tisch, die Lampe, das Haus.
+233|Pronouns and verb conjugation
+234|ich -e | du -st | er/sie/es -t | wir -en | ihr -t | sie/Sie -en. Example lernen: ich lerne, du lernst, er lernt, wir lernen.
+235|sein and haben
+236|sein: ich bin, du bist, er ist, wir sind, ihr seid, sie sind. haben: ich habe, du hast, er hat, wir haben, ihr habt, sie haben.
+237|Sentence order
+238|The verb is always the second element: Ich lerne heute Deutsch. / Heute lerne ich Deutsch. A question with a question word: Wo wohnst du? Yes/no question: verb first: Wohnst du hier?
+239|Negation
+240|nicht negates the verb or adjective: Ich komme nicht. kein negates the noun: Ich habe kein Auto.
+241|Cases (Fälle)
+242|Nominativ for the subject, Akkusativ for the object: der → den (Ich sehe den Mann), die and das do not change. Dativ after mit, zu and bei: dem / der / dem.
+243|Simple past (Perfekt)
+244|haben/sein + Partizip II: Ich habe gelernt. Ich bin gegangen. For regular verbs ge- + stem + t: gemacht.
+245|Plural
+246|Patterns: -e (Tag→Tage), -n (Frau→Frauen), -er (Kind→Kinder), umlaut (Apfel→Äpfel), -s (Auto→Autos). Learn the plural with the word.
+247|At the restaurant and café
+248|Ich hätte gern = I'd like (polite, better than ich will). Die Rechnung, bitte = the bill, please. The tip is called Trinkgeld.
+249|restaurant
+250|café
+251|menu
+252|waiter
+253|to order (food)
+254|the bill
+255|tip
+256|to taste
+257|breakfast
+258|dinner
+259|hungry

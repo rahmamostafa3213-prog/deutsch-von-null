@@ -1,0 +1,241 @@
+520|For a command to one person: just the verb stem: Komm! (come!), Sprich! (speak!). Politely with Sie: Kommen Sie! (please come!). For several people: Kommt! (come, all of you!).
+521|Supermarket
+522|an der Kasse = at the checkout. die Packung = the pack. In Germany you return empty bottles and get money back: it's called der Pfand.
+523|groceries
+524|vegetables
+525|fruit
+526|potatoes
+527|tomatoes
+528|yogurt
+529|juice
+530|salt
+531|sugar
+532|bottle
+533|liter
+534|kilo
+535|fresh
+536|Where is the milk?
+537|A kilo of tomatoes, please
+538|Cash or card?
+539|Bank, post office and offices
+540|der Termin = an official appointment. At German offices you usually need an appointment in advance. unterschreiben = to sign.
+541|bank
+542|bank account
+543|post office
+544|letter
+545|parcel
+546|government office
+547|form
+548|ID card
+549|address
+550|to sign
+551|to pick up
+552|insurance
+553|banknote
+554|coin
+555|I want to open a bank account
+556|I want to pick up the parcel
+557|Where do I sign?
+558|Mobile phone and technology
+559|anrufen is a separable verb: Ich rufe dich an = I'll call you. aufladen = to charge: Ich lade mein Handy auf.
+560|mobile phone
+561|internet
+562|password
+563|message
+564|to call on the phone
+565|to send
+566|Wi-Fi
+567|battery
+568|screen
+569|app
+570|to charge
+571|to download
+572|printer
+573|broken
+574|My phone is broken
+575|I'll call you later
+576|What's the Wi-Fi password?
+577|Vacation and travel
+578|in den Urlaub fahren = to go on vacation. sich erholen = to relax. die Sehenswürdigkeit = the tourist attraction.
+579|vacation
+580|sea
+581|beach
+582|hotel
+583|tourist attraction
+584|souvenir
+585|scenery
+586|to hike in the mountains
+587|to rest and relax
+588|passport
+589|border
+590|trip
+591|to book
+592|outing / errand
+593|We're going on vacation
+594|I booked the hotel
+595|The sea is stunning
+596|Professions
+597|A male profession takes der and a female one takes die + the ending -in: der Lehrer → die Lehrerin. After sein we say the profession without an artikel: Ich bin Lehrerin.
+598|teacher
+599|engineer
+600|chef
+601|salesperson
+602|nurse
+603|hairdresser
+604|police officer
+605|driver
+606|university student
+607|unemployed
+608|job
+609|My job is teacher
+610|He works as an engineer
+611|She's looking for a new job
+612|Furniture and apartment
+613|die Miete = the rent. mieten = to rent (I will live there), vermieten = to rent out (the landlord). der Vermieter = the landlord.
+614|rent
+615|to rent
+616|to rent out
+617|landlord
+618|sofa
+619|wardrobe
+620|carpet
+621|mirror
+622|washing machine
+623|fridge
+624|stove
+625|balcony
+626|stairs
+627|garden
+628|I'm looking for an apartment
+629|How much is the rent?
+630|The fridge is broken
+631|Daily routine
+632|Reflexive verbs take sich: Ich ziehe mich an = I get dressed. And aufstehen is a separable verb: Ich stehe um 7 auf = I get up at 7.
+633|to wake up
+634|to shower
+635|to brush teeth
+636|to have breakfast
+637|alarm clock
+638|morning
+639|noon
+640|night
+641|to cook
+642|to clean
+643|to watch TV
+644|to nap
+645|I get up at 7
+646|I shower in the morning
+647|In the evening I watch TV
+648|Occasions and holidays
+649|Alles Gute zum Geburtstag = happy birthday. einladen is a separable verb: Ich lade dich ein = I'll invite you. gratulieren + Dativ: Ich gratuliere dir = congratulations to you.
+650|birthday
+651|invitation
+652|to invite
+653|surprise
+654|to celebrate
+655|candle
+656|wedding
+657|big occasion
+658|public holiday
+659|Christmas
+660|to congratulate
+661|to toast
+662|decorations
+663|guest
+664|Happy birthday!
+665|I'll invite you to my party
+666|We're celebrating tonight
+667|The German letters
+668|Letter names and how to pronounce them
+669|The German alphabet
+670|German uses the same letters as English (26 letters) <b>+ 4 extra letters</b>: <span class='de'>ä ö ü ß</span><br>The best part: German is pronounced almost exactly as it is written, so once you learn the letter sounds you can read any word.
+671|Letters A to G
+672|<span class='de'>A B C D E F G</span><br>In German: ah, bay, tsay, day, ay, eff, gay.<br>Watch out: <span class='de'>C</span> is called "tsay" and <span class='de'>G</span> is called "gay".
+673|H to N
+674|<span class='de'>H I J K L M N</span><br>hah, ee, yot, kah, ell, emm, enn.<br>The letter <span class='de'>J</span> is called "yot" and sounds like English y: <span class='de'>ja</span> = yes.
+675|O to U
+676|<span class='de'>O P Q R S T U</span><br>oh, pay, koo, err, ess, tay, oo.<br>The letter <span class='de'>R</span> is made in the throat, and is light at the start of a word.
+677|V to Z
+678|<span class='de'>V W X Y Z</span><br>fow, vay, iks, ypsilon, tset.<br>The biggest trick: <span class='de'>W</span> sounds like English V, and <span class='de'>V</span> usually sounds like F!
+679|The extra letters
+680|<span class='de'>Ä Ö Ü ß</span><br>ä like "e" in "bed" (long): <span class='de'>Äpfel</span><br>ö round your lips: <span class='de'>Öl</span><br>ü like "ee" with rounded lips: <span class='de'>über</span><br>ß a double s, like ss: <span class='de'>Straße</span>
+681|Listen and choose the letter
+682|Be = the letter B. Pe = P and De = D.
+683|Ess = the letter S.
+684|What is the name of this letter in German?
+685|J is called Jott and sounds like y.
+686|How many extra letters does German have compared to English?
+687|Four: ä ö ü ß
+688|Special sounds
+689|ch, sch, sp, st and ei
+690|The sch sound = "sh"
+691|<span class='de'>sch</span> sounds exactly like "sh":<br><span class='de'>Schule</span> = school (SHOO-leh)<br><span class='de'>schön</span> = beautiful (shurn)
+692|sp and st at the start of a word
+693|At the start of a word:<br><span class='de'>sp</span> = shp: <span class='de'>sprechen</span> (SHPRE-khen) = to speak<br><span class='de'>st</span> = sht: <span class='de'>Stein</span> (SHTINE) = stone
+694|The ch sound
+695|<span class='de'>ch</span> has two sounds:<br>After i/e: a soft hiss, like a breathy "h": <span class='de'>ich</span> = I<br>After a/o/u: like the Arabic kh: <span class='de'>Buch</span> = book (bookh)
+696|ei, ie and eu
+697|<span class='de'>ei</span> = "eye": <span class='de'>nein</span> (nine) = no<br><span class='de'>ie</span> = long "ee": <span class='de'>Liebe</span> (LEE-beh) = love<br><span class='de'>eu / äu</span> = "oy": <span class='de'>neu</span> (noy) = new
+698|Easy but tricky letters
+699|<span class='de'>w</span> = v: <span class='de'>wir</span> (veer) = we<br><span class='de'>v</span> = f: <span class='de'>Vater</span> (FAH-ter) = father<br><span class='de'>j</span> = y: <span class='de'>ja</span> (yah) = yes<br><span class='de'>z</span> = ts: <span class='de'>Zeit</span> (tsite) = time
+700|Which sound is in the word schön?
+701|sh
+702|s
+703|kh
+704|j
+705|sch = sh, so it is pronounced "shurn".
+706|Listen: nein. How is the combination ei pronounced?
+707|eye
+708|ee
+709|oy
+710|oh
+711|ei = "eye", like nine.
+712|How is the letter z pronounced?
+713|z
+714|th
+715|z = ts, Zeit = tsite.
+716|In the word Buch, how is the final ch pronounced?
+717|a light h
+718|k
+719|After the letter u it is pronounced kh: bookh.
+720|Personal pronouns
+721|ich, du and wir: the first building block
+722|Singular pronouns
+723|<span class='de'>ich</span> = I<br><span class='de'>du</span> = you<br><span class='de'>er</span> = he<br><span class='de'>sie</span> = she<br><span class='de'>es</span> = it, for things (for example: the child <span class='de'>das Kind</span>)
+724|Plural pronouns
+725|<span class='de'>wir</span> = we<br><span class='de'>ihr</span> = you (plural)<br><span class='de'>sie</span> = they<br><span class='de'>Sie</span> (always with a capital letter) = you (formal, polite)
+726|A live example
+727|<span class='de'>Ich bin Sara.</span> = I am Sara<br><span class='de'>Du bist Lena.</span> = You are Lena<br><span class='de'>Wir sind Freunde.</span> = We are friends<br>Notice that the verb changes with every pronoun. That's what we learn in the next lesson.
+728|What does wir mean?
+729|you (plural)
+730|they
+731|wir = we.
+732|How do you say "she"?
+733|sie = she. And the same word sie = they. The context makes it clear.
+734|Sie with a capital S means:
+735|you (formal, polite)
+736|you (informal)
+737|The formal Sie is always written with a capital letter, even in the middle of a sentence.
+738|The right pronoun for das Kind (the child):
+739|das Kind is neuter, so we use es.
+740|Your first sentences
+741|Introduce yourself in 5 sentences
+742|Your name
+743|<span class='de'>Ich heiße Sara.</span> = My name is Sara<br>Put your name in place of Sara. heißen = to be called.
+744|How you are / what you do
+745|<span class='de'>Ich bin Studentin.</span> = I'm a student<br><span class='de'>Ich bin müde.</span> = I'm tired<br>After bin you put an adjective or a profession without an artikel.
+746|Your country
+747|<span class='de'>Ich komme aus Ägypten.</span> = I'm from Egypt<br>kommen aus + country = coming from...
+748|Where you live
+749|<span class='de'>Ich wohne in Kairo.</span> = I live in Cairo<br>wohnen in + city = living in...
+750|What are you doing right now 😉
+751|<span class='de'>Ich lerne Deutsch.</span> = I'm learning German<br>And it's true! Say it with pride.
+752|How do you say "I'm from Egypt"?
+753|kommen aus + country.
+754|Ich bin Studentin means:
+755|I'm a teacher
+756|I'm tired
+757|Studentin = a university student (female).
+758|How do you say "I'm learning German"?
+759|lernen = to learn, sprechen = to speak.
+519|Imperative

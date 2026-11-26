@@ -1,0 +1,259 @@
+260|I'd like a coffee, please
+261|This tastes very good
+262|Can I pay by card?
+263|Travel and hotel
+264|abfahren = to depart (transport), ankommen = to arrive. These verbs are separable: Der Zug fährt um 8 ab (the train leaves at 8).
+265|ticket
+266|plane
+267|booking
+268|single room
+269|double room
+270|suitcase
+271|delay
+272|to depart / take off
+273|to arrive
+274|I booked a room
+275|What time does the train leave?
+276|A ticket to Berlin, please
+277|The train is late
+278|Health and body
+279|Mir tut der Kopf weh = my head hurts. Gute Besserung = get well soon. An appointment at the doctor: der Termin.
+280|head
+281|stomach
+282|pain
+283|sick
+284|healthy / well
+285|doctor (male)
+286|doctor (female)
+287|pharmacy
+288|medicine
+289|fever
+290|appointment
+291|flu
+292|My head hurts
+293|I have a fever
+294|I need an appointment
+295|Get well soon!
+296|Work and study
+297|Ich arbeite als = I work as a... Ich studiere = I study at university. die Prüfung = the exam.
+298|work
+299|profession
+300|office
+301|colleague (male)
+302|colleague (female)
+303|manager
+304|job application
+305|salary
+306|university
+307|exam
+308|course
+309|end of work
+310|I work as a teacher
+311|I have an exam tomorrow
+312|I'm applying for the job
+313|Where do you work?
+314|Hobbies and sports
+315|gern after a verb means "I like doing it": Ich spiele gern Fußball = I like playing football.
+316|hobby
+317|sport
+318|football
+319|to swim
+320|book
+321|music
+322|film
+323|game / match
+324|to go for a walk
+325|to dance
+326|to draw / paint
+327|bicycle
+328|What do you like to do?
+329|I like playing football
+330|I like listening to music
+331|At the weekend I ride my bike
+332|Weather and seasons
+333|Es regnet = it's raining. Es ist sonnig = it's sunny. Mir ist kalt = I feel cold. All seasons are der.
+334|weather
+335|sun
+336|rain
+337|snow
+338|wind
+339|cloud
+340|hot
+341|cold
+342|warm
+343|spring
+344|summer
+345|winter
+346|What's the weather like today?
+347|It's raining today
+348|In summer the weather is hot
+349|I feel cold
+350|Clothes
+351|anziehen = to put on (separable verb): Ich ziehe die Jacke an. gefallen = to please: Das Kleid gefällt mir (I like the dress).
+352|shirt
+353|trousers
+354|shoe
+355|jacket
+356|cap
+357|skirt
+358|handbag
+359|to put on / wear
+360|size
+361|to fit
+362|stylish
+363|What will you wear today?
+364|I like the dress
+365|What's your size?
+366|The trousers don't fit me
+367|Feelings and relationships
+368|sich freuen = to be happy: Ich freue mich. vermissen = to miss: Ich vermisse dich = I miss you.
+369|happy
+370|sad
+371|tired
+372|excited / nervous
+373|in love
+374|friend / boyfriend
+375|friend / girlfriend
+376|love
+377|to miss
+378|to laugh
+379|to cry
+380|gift
+381|I'm very happy
+382|I miss you
+383|Why are you sad?
+384|That's a lovely gift
+385|Hello! I'm Lina. And you?
+386|I'm Sara. Nice to meet you!
+387|Where are you from, Sara?
+388|I'm from Egypt. And you?
+389|I'm from Germany, from Berlin.
+390|Berlin is lovely! I'm learning German.
+391|Your German is very good!
+392|Thank you, that's kind of you!
+393|At the café
+394|Have a nice day! What would you like to order?
+395|I'd like a coffee and water.
+396|Sure. Would you like something to eat as well?
+397|Yes, a piece of cake please.
+398|Right away!
+399|The bill, please.
+400|Altogether that's 8.50 euros.
+401|Here you go. Keep the change (as a tip).
+402|At the market
+403|Excuse me, how much is this?
+404|That's 2 euros.
+405|And the tomatoes?
+406|3 euros per kilo.
+407|Okay, I'll take a kilo please.
+408|Anything else?
+409|No thank you, that's all.
+410|That's 5 euros in total.
+411|Asking for directions
+412|Excuse me, where is the train station?
+413|The train station? Go straight ahead.
+414|And then?
+415|Then left at the traffic light.
+416|Is it far from here?
+417|No, only 5 minutes on foot.
+418|Thank you very much for your help!
+419|You're welcome! Good luck!
+420|At the doctor
+421|Good morning. What seems to be the problem?
+422|I have a fever and a headache.
+423|How long has this been going on?
+424|For two days.
+425|Do you have a cough as well?
+426|No, just the fever.
+427|Take this medicine 3 times a day.
+428|Thank you, doctor.
+429|Booking a hotel room
+430|Hotel Sonne, good day!
+431|Good day. I'd like to book a room.
+432|For how many nights?
+433|Three nights, please.
+434|A single or a double room?
+435|A double room, please.
+436|Okay, that's 90 euros per night.
+437|Okay, thank you very much!
+438|Job interview
+439|Good day! Please take a seat.
+440|Thank you very much. I'm glad about the invitation.
+441|Tell me about yourself. What do you do?
+442|I'm a teacher and I'm learning German now.
+443|Why do you want to work with us?
+444|I like working with children and people.
+445|Very nice. When can you start?
+446|I can start next week.
+447|Apartment for rent
+448|Hello, this is Mr. Müller.
+449|Good day. I'm calling about the apartment.
+450|Yes, the apartment is still available.
+451|How much is the rent, please?
+452|650 euros a month including utilities.
+453|That's good. Can I view the apartment?
+454|Sure. Is tomorrow at 3 pm okay?
+455|Yes, that suits me. Thank you very much!
+456|At the train station
+457|Excuse me, a ticket to Munich.
+458|One way or return?
+459|Return, please.
+460|That's 58 euros. Platform 4.
+461|When does the next train leave?
+462|In 20 minutes, but it's 10 minutes late.
+463|I see. Will it stay on platform 4?
+464|Yes, platform 4. Have a good trip!
+465|I'm tired.
+466|to have
+467|I have a car.
+468|can / to be able to
+469|I can swim.
+470|must / to have to
+471|I have to study.
+472|to want
+473|I want to go to Germany.
+474|to be allowed to
+475|Smoking is not allowed here.
+476|should / ought to
+477|I should drink more water.
+478|to like
+479|I like coffee.
+480|to come
+481|I'm from Egypt.
+482|I'm going home.
+483|What are you doing?
+484|to learn / study
+485|I'm learning German.
+486|I eat bread.
+487|to ride / drive
+488|I take the train.
+489|I speak Arabic.
+490|I'm working today.
+491|to take
+492|I take the bus.
+493|to give
+494|Give me the bill, please.
+495|to see
+496|I see the train.
+497|to know
+498|I don't know.
+499|I sleep 8 hours.
+500|to find
+501|I find German beautiful.
+502|to stay
+503|I'll stay at home today.
+504|Do you understand me?
+505|Modal verbs
+506|können (can), müssen (must), wollen (want), dürfen (be allowed), sollen (should), mögen (like). The modal verb is the second element of the sentence and the main verb goes to the end in the infinitive: Ich will Deutsch lernen (I want to learn German).
+507|Separable verbs
+508|Verbs like ankommen, abfahren and anziehen split when conjugated: the first part goes to the end of the sentence. Der Zug kommt um 9 an (the train arrives at 9). In the infinitive they are one word again.
+509|weil and dass
+510|After weil (because) and dass (that) the verb goes to the end of the sentence: Ich lerne Deutsch, weil ich in Deutschland arbeiten will (I'm learning German because I want to work in Germany).
+511|Past of sein and haben
+512|In everyday speech: war (was): ich war, du warst, er war, wir waren. And hatte (had): ich hatte, du hattest. With other verbs use the Perfekt: Ich habe gelernt.
+513|Comparison
+514|schnell → schneller → am schnellsten. gut → besser → am besten. viel → mehr → am meisten. We use als for "than": Ich bin älter als du (I'm older than you).
+515|Important prepositions
+516|Always with Akkusativ: für, ohne, gegen, durch. Always with Dativ: mit, zu, bei, von, nach, aus. Both cases: in, an, auf. Ask "where?" for Dativ and "where to?" for Akkusativ: Ich bin in der Schule / Ich gehe in die Schule.
+517|Reflexive verbs
+518|Verbs like sich freuen (to be happy) and sich anziehen (to get dressed) take a reflexive pronoun: ich → mich, du → dich, er/sie → sich. Example: Ich freue mich (I'm happy), Ziehst du dich an? (Are you getting dressed?). The reflexive pronoun comes right after the verb.

@@ -1,0 +1,116 @@
+760|Das Geheimnis der deutschen Artikel
+761|Warum drei Artikel?
+762|Englisch hat nur „the“, aber Deutsch hat 3:<br><span class='de'>der</span> für maskulin, <span class='de'>die</span> für feminin, <span class='de'>das</span> für neutral.<br>Es gibt nicht immer eine logische Regel. Das Geheimnis: <b>Lerne jedes Wort von Anfang an mit seinem Artikel</b>.
+763|der: maskulin
+764|Männer, männliche Berufe, Wochentage und Monate:<br><span class='de'>der Vater</span>, <span class='de'>der Montag</span>, <span class='de'>der Tisch</span>
+765|die: feminin
+766|Frauen, weibliche Berufe und die meisten Wörter auf -e:<br><span class='de'>die Mutter</span>, <span class='de'>die Lampe</span>, <span class='de'>die Küche</span>
+767|das: neutral
+768|Meist Dinge und Wörter auf -chen:<br><span class='de'>das Haus</span>, <span class='de'>das Kind</span>, <span class='de'>das Wasser</span>
+769|Und der Plural? Einfach!
+770|Der Plural ist immer <span class='de'>die</span>, egal wie der Singular ist:<br>der Tisch → die Tische<br>das Haus → die Häuser
+771|Mutter ist feminin: die Mutter.
+772|Haus ist neutral: das Haus.
+773|Tisch ist maskulin: der Tisch.
+774|Der Plural von der Apfel ist die Äpfel. Im Deutschen ist der Plural-Artikel immer:
+775|Der Plural ist immer die.
+776|Zahlen mit Ton
+777|1 bis 20 richtig aussprechen
+778|1 bis 5
+779|<span class='de'>eins</span> = 1<br><span class='de'>zwei</span> = 2<br><span class='de'>drei</span> = 3<br><span class='de'>vier</span> = 4<br><span class='de'>fünf</span> = 5
+780|6 bis 10
+781|<span class='de'>sechs</span> = 6<br><span class='de'>sieben</span> = 7<br><span class='de'>acht</span> = 8<br><span class='de'>neun</span> = 9<br><span class='de'>zehn</span> = 10
+782|11 bis 20
+783|<span class='de'>elf</span> = 11, <span class='de'>zwölf</span> = 12 (einzeln lernen)<br>Ab 13: Zahl + zehn: <span class='de'>dreizehn</span> = 13<br><span class='de'>zwanzig</span> = 20
+784|Hör zu und wähle die Zahl
+785|Wie sagt man „3“?
+786|drei = 3, dreizehn = 13.
+787|Hör zu: Das kostet fünf Euro. Wie viel kostet es?
+788|5 Euro
+789|15 Euro
+790|50 Euro
+791|2 Euro
+792|Das erste Gespräch
+793|Die Begrüßung
+794|Die ersten zwei Sätze bei jeder Vorstellung:<br><span class='de'>Hallo!</span><br><span class='de'>Wie heißt du?</span>
+795|Die Antwort
+796|<span class='de'>Ich heiße Sara.</span><br><span class='de'>Und du?</span>
+797|Woher?
+798|<span class='de'>Woher kommst du?</span><br><span class='de'>Ich komme aus Ägypten.</span>
+799|Ein netter Abschluss
+800|<span class='de'>Freut mich!</span><br><span class='de'>Tschüss!</span><br>Damit hast du dein erstes vollständiges Gespräch auf Deutsch geführt 🎉
+801|Jemand sagt: Wie heißt du? Was antwortest du?
+802|Es fragt nach dem Namen, also antwortest du: Ich heiße...
+803|Jemand sagt: Woher kommst du? Was antwortest du?
+804|Woher = aus welchem Ort, also antwortest du: Ich komme aus...
+805|Freut mich! bedeutet:
+806|Schön, dich kennenzulernen!
+807|Auf Wiedersehen!
+808|Guten Morgen!
+809|Das sagt man beim ersten Kennenlernen.
+810|Alphabet und Laute
+811|Buchstabennamen und die zusätzlichen Buchstaben richtig gesprochen
+812|Willkommen zur ersten Lektion 🎬
+813|Heute lernen wir die deutschen Buchstaben und ihre Namen. Deutsch wird fast so gesprochen, wie es geschrieben wird, deshalb ist das die wichtigste Lektion am Anfang.
+815|Buchstaben A bis G
+816|a, be, ze, de, e, eff, ge
+819|ha, i, jott, ka, ell, emm, enn
+822|o, pe, ku, err, ess, te, u
+824|fau, we, iks, ypsilon, zett
+827|Gibt es im Englischen nicht. Hör sie in Wörtern
+830|Bravo! 🎉
+831|Du hast die erste Lektion geschafft. Wiederhole die Buchstaben unter Werkzeuge → Aussprache und Buchstaben und versuche, jedes deutsche Wort zu lesen.
+833|Pronomen und das Verb sein
+834|Das wichtigste Verb mit allen Pronomen
+835|Pronomen im Singular
+836|ich, du, er, sie, es
+839|wir, ihr, sie, Sie
+842|Das Verb sein
+843|Das wichtigste Verb der Sprache, unregelmäßig, also muss man es auswendig lernen
+846|sein im Plural
+847|wir sind, ihr seid, sie sind
+850|Beispiele aus dem Leben
+851|Ich bin müde. Du bist nett. Wir sind Freunde.
+853|Geschafft! ✅
+854|Konjugiere sein mit jedem Pronomen laut. Die Konjugationen findest du unter Werkzeuge → Verben konjugieren.
+856|Begrüßung und Vorstellung
+857|Dein erstes Gespräch auf Deutsch
+858|Hallo, Guten Morgen, Guten Tag
+861|Wie heißt du? / Ich heiße Sara
+865|Woher kommst du?
+866|Woher kommst du? / Ich komme aus Ägypten
+869|Freut mich, Tschüss, Bis bald
+873|Ein ganzes Gespräch 🎭
+874|Hör das ganze Gespräch, dann probiere es selbst
+877|Wie man das Genus eines Wortes erkennt und lernt
+878|Warum 3 Artikel?
+879|Deutsch teilt Nomen in maskulin, feminin und neutral ein. Es gibt nicht immer eine feste Regel, also: Lerne das Wort von Anfang an mit dem Artikel.
+881|Männer, Wochentage, Monate
+884|Frauen und die meisten Wörter auf -e
+887|Meist Dinge und Wörter auf -chen
+890|Der Plural ist am einfachsten
+891|Der Plural ist immer die, egal wie der Singular ist
+893|Tipp der Lektion 💡
+894|Ab heute: Lerne jedes neue Wort mit dem Artikel. Nicht Haus, sondern das Haus.
+896|Zahlen und Uhrzeit
+897|Zähle und frage selbstbewusst nach der Zeit
+898|1 bis 10
+899|Hör zu und sprich nach
+901|11 und 12 muss man auswendig lernen. Der Rest: Zahl + zehn
+904|Die Zehner
+905|20 30 40 50. Beachte dreißig mit ß
+908|Nach der Uhrzeit fragen und antworten
+912|Halb und Viertel
+913|Ein Trick: halb vier bedeutet 3:30 Uhr, nicht 4:30 Uhr!
+916|Die goldene Regel: Das Verb steht an zweiter Stelle
+917|Die goldene Regel
+918|In einem normalen deutschen Satz steht das Verb immer an <b>zweiter Stelle</b>. Das ist die wichtigste Regel der ganzen Sprache.
+920|Beispiel
+921|Ich lerne heute Deutsch: Das Verb lerne ist das zweite Wort
+924|Derselbe Satz anders
+925|Heute lerne ich Deutsch: Das Verb steht weiter an zweiter Stelle, auch wenn der Satz mit der Zeit beginnt
+928|Die Frage
+929|Ja/Nein-Frage: Das Verb steht am Anfang. Frage mit Fragewort: erst das Fragewort, dann das Verb
+933|nicht für Verben und Adjektive, kein für Nomen
+937|Eine Denkübung 🧠
+938|Ordne selbst: Deutsch / ich / lerne. Richtig: Ich lerne Deutsch. Das Verb steht immer am richtigen Platz.

@@ -1,0 +1,41 @@
+0|AI tutor|KI-Tutor
+1|Chat and write with an AI tutor that corrects you (optional|Chatte und schreibe mit einem KI-Tutor, der dich korrigiert (optional
+2|App language|App-Sprache
+3|AI tutor (optional|KI-Tutor (optional
+4|The key is saved on your phone only|Der Schlüssel ist nur auf deinem Handy gespeichert
+5|Not enabled. The app works fully without it|Nicht aktiviert. Die App funktioniert komplett ohne ihn
+6|Set up the AI tutor|KI-Tutor einrichten
+7|Language|Sprache
+8|The key isn't working. Make sure you copied it correctly from the AI tutor setup|Der Schlüssel funktioniert nicht. Prüfe, ob du ihn richtig aus der KI-Tutor-Einrichtung kopiert hast
+9|No internet, or the app isn't running on the phone. The AI tutor needs internet|Kein Internet, oder die App läuft nicht auf dem Handy. Der KI-Tutor braucht Internet
+10|You've reached the free limit for now. Wait a bit and try again|Du hast das kostenlose Limit vorerst erreicht. Warte kurz und versuche es noch einmal
+11|A temporary problem at the service. Try again in a moment|Ein vorübergehendes Problem beim Dienst. Versuche es gleich noch einmal
+12|The tutor didn't reply. Try asking another way|Der Tutor hat nicht geantwortet. Versuche, anders zu fragen
+13|Write or say any sentence in German and I'll correct it. You can also ask about any rule or word|Schreibe oder sage einen beliebigen Satz auf Deutsch und ich korrigiere ihn. Du kannst auch nach Regeln oder Wörtern fragen
+14|Send|Senden
+15|Messages are sent to Google so the tutor can reply. Don't write personal data|Nachrichten werden an Google gesendet, damit der Tutor antworten kann. Schreibe keine persönlichen Daten
+16|An AI tutor inside the app: you write or speak German and it corrects you and explains. It's optional and the whole app works without it|Ein KI-Tutor in der App: Du schreibst oder sprichst Deutsch, er korrigiert dich und erklärt. Er ist optional und die ganze App funktioniert auch ohne ihn
+17|How do you get a free key|So bekommst du einen kostenlosen Schlüssel
+18|Open the website with the button below|Öffne die Website mit der Taste unten
+19|Sign in with your Google account|Melde dich mit deinem Google-Konto an
+20|Tap|Tippe auf
+21|and copy the key|und kopiere den Schlüssel
+22|Paste it here and tap Save|Füge ihn hier ein und tippe auf Speichern
+23|Open the key website|Schlüssel-Website öffnen
+24|Your key|Dein Schlüssel
+25|No key yet|Noch kein Schlüssel
+26|Paste the key here|Füge den Schlüssel hier ein
+27|Save and test the key|Schlüssel speichern und testen
+28|Delete the key|Schlüssel löschen
+29|Start the conversation|Gespräch starten
+30|Model (optional|Modell (optional
+31|Leave empty for automatic selection|Leer lassen für automatische Auswahl
+32|Important to know|Wichtig zu wissen
+33|The key is stored on your phone only. It is not inside the app and is sent to no one except Google|Der Schlüssel wird nur auf deinem Handy gespeichert. Er steckt nicht in der App und wird nur an Google gesendet
+34|The messages you write to the tutor are sent to Google. On the free tier Google may use them to improve its products, so don't write personal data|Die Nachrichten an den Tutor werden an Google gesendet. Im kostenlosen Tarif darf Google sie zur Verbesserung seiner Produkte nutzen, also schreibe keine persönlichen Daten
+35|The free tier has usage limits. If you run out, the tutor will tell you to wait|Der kostenlose Tarif hat Nutzungslimits. Wenn sie aufgebraucht sind, sagt dir der Tutor, dass du warten sollst
+36|It needs internet. The tutor can make mistakes, so double-check important things|Er braucht Internet. Der Tutor kann Fehler machen, also prüfe Wichtiges nach
+37|The key doesn't look right. Copy all of it without spaces|Der Schlüssel sieht nicht richtig aus. Kopiere ihn komplett ohne Leerzeichen
+38|The AI tutor works only from the phone app|Der KI-Tutor funktioniert nur in der Handy-App
+39|The key works|Der Schlüssel funktioniert
+40|The key was saved but the service returned a temporary problem. Try the chat in a moment|Der Schlüssel wurde gespeichert, aber der Dienst meldete ein vorübergehendes Problem. Probiere den Chat gleich aus

@@ -1,0 +1,180 @@
+760|The secret of the German artikel
+761|Why three articles?
+762|English has only "the", but German has 3:<br><span class='de'>der</span> for masculine, <span class='de'>die</span> for feminine, <span class='de'>das</span> for neuter.<br>There is not always a logical rule. The secret is to <b>learn each word with its article</b> from day one.
+763|der: masculine
+764|Men, masculine professions, days of the week and months:<br><span class='de'>der Vater</span> father, <span class='de'>der Montag</span> Monday, <span class='de'>der Tisch</span> table
+765|die: feminine
+766|Women, feminine professions and most words ending in -e:<br><span class='de'>die Mutter</span> mother, <span class='de'>die Lampe</span> lamp, <span class='de'>die Küche</span> kitchen
+767|das: neuter
+768|Mostly things, and words ending in -chen:<br><span class='de'>das Haus</span> house, <span class='de'>das Kind</span> child, <span class='de'>das Wasser</span> water
+769|And the plural? Easy!
+770|The plural is always <span class='de'>die</span> whatever the singular is:<br>der Tisch → die Tische<br>das Haus → die Häuser
+771|Mother is feminine: die Mutter.
+772|House is neuter: das Haus.
+773|Table is masculine: der Tisch.
+774|The plural of der Apfel is die Äpfel. In German the plural article is always:
+775|The plural is always die.
+776|Numbers with sound
+777|1 to 20 pronounced correctly
+778|1 to 5
+779|<span class='de'>eins</span> ines = 1<br><span class='de'>zwei</span> tsvai = 2<br><span class='de'>drei</span> drai = 3<br><span class='de'>vier</span> feer = 4<br><span class='de'>fünf</span> fünf = 5
+780|6 to 10
+781|<span class='de'>sechs</span> zeks = 6<br><span class='de'>sieben</span> zeeben = 7<br><span class='de'>acht</span> akht = 8<br><span class='de'>neun</span> noyn = 9<br><span class='de'>zehn</span> tsayn = 10
+782|11 to 20
+783|<span class='de'>elf</span> = 11, <span class='de'>zwölf</span> = 12 (learn these separately)<br>From 13: number + zehn: <span class='de'>dreizehn</span> = 13 (three-ten)<br><span class='de'>zwanzig</span> = 20
+784|Listen and choose the number
+785|How do you say "three"?
+786|drei = 3, dreizehn = 13.
+787|Listen: Das kostet fünf Euro. How much is it?
+788|5 euros
+789|15 euros
+790|50 euros
+791|2 euros
+792|The first conversation
+793|Greeting
+794|The first two sentences in any introduction:<br><span class='de'>Hallo!</span> = Hello!<br><span class='de'>Wie heißt du?</span> = What's your name?
+795|The reply
+796|<span class='de'>Ich heiße Sara.</span> = My name is Sara<br><span class='de'>Und du?</span> = And you?
+797|Where from?
+798|<span class='de'>Woher kommst du?</span> = Where are you from?<br><span class='de'>Ich komme aus Ägypten.</span> = I'm from Egypt
+799|A nice ending
+800|<span class='de'>Freut mich!</span> = Nice to meet you!<br><span class='de'>Tschüss!</span> = Goodbye!<br>And with that you had your first complete German conversation 🎉
+801|Someone says: Wie heißt du? How do you reply?
+802|It asks for your name, so the reply is: Ich heiße...
+803|Someone says: Woher kommst du? How do you reply?
+804|Woher = where from, so the reply is: Ich komme aus...
+805|Freut mich! means:
+806|Nice to meet you!
+807|Goodbye!
+808|Good morning!
+809|It's said when you first meet someone.
+810|Alphabet and sounds
+811|Letter names and the extra letters, pronounced correctly
+812|Welcome to your first lesson 🎬
+813|Today we learn the German letters and their names. German is pronounced almost as it is written, so this is the most important lesson at the start.
+814|x
+815|Letters A to G
+816|ah, bay, tsay, day, ay, eff, gay
+817|x
+818|x
+819|hah, ee, yot, kah, ell, emm, enn
+820|x
+821|x
+822|oh, pay, koo, err, ess, tay, oo
+823|x
+824|fow, vay, iks, ypsilon, tset
+825|x
+826|x
+827|Not found in English. Listen to them inside words
+828|x
+829|x
+830|Bravo! 🎉
+831|You finished the first lesson. Review the letters from Tools → Pronunciation and letters, and try reading any German word you meet.
+832|x
+833|Pronouns and the verb sein
+834|The most important verb with all the pronouns
+835|Singular pronouns
+836|I, you, he, she, it
+837|x
+838|x
+839|we, you (plural), they, you (formal)
+840|x
+841|x
+842|The verb sein: to be
+843|The most important verb in the language, and irregular, so it must be memorized
+844|x
+845|x
+846|sein with the plural
+847|we are, you are (plural), they are
+848|x
+849|x
+850|Examples from life
+851|I'm tired. You're kind. We're friends.
+852|x
+853|You did it! ✅
+854|Try conjugating sein with every pronoun out loud. You'll find the conjugations in Tools → Verb conjugation.
+855|x
+856|Greetings and introductions
+857|Your first conversation in German
+858|Hello, good morning, have a nice day
+859|x
+860|x
+861|What's your name? / My name is Sara
+862|x
+863|x
+864|x
+865|Where are you from?
+866|Where are you from? / I'm from Egypt
+867|x
+868|x
+869|Nice to meet you, goodbye, see you soon
+870|x
+871|x
+872|x
+873|A full conversation 🎭
+874|Listen to the whole conversation, then try it yourself
+875|x
+876|x
+877|How to know a word's gender and memorize it
+878|Why 3 articles?
+879|German divides nouns into masculine, feminine and neuter. There is not always a fixed rule, so the secret is: learn the word with its article from day one.
+880|x
+881|Men, days of the week, months
+882|x
+883|x
+884|Women, and most words ending in e
+885|x
+886|x
+887|Mostly things, and words ending in chen
+888|x
+889|x
+890|The plural is the easiest part
+891|The plural is always die whatever the singular is
+892|x
+893|Lesson tip 💡
+894|From today: whenever you learn a new word, learn it with its article. Not Haus, but das Haus.
+895|x
+896|Numbers and time
+897|Count and ask for the time with confidence
+898|1 to 10
+899|Listen and repeat
+900|x
+901|11 and 12 must be memorized. The rest are number + zehn
+902|x
+903|x
+904|The tens
+905|20 30 40 50. Notice dreißig with ß
+906|x
+907|x
+908|Asking for the time and the reply
+909|x
+910|x
+911|x
+912|Half past and quarter past
+913|A trick: halb vier means half past three, not half past four!
+914|x
+915|x
+916|The golden rule: the verb is the second element
+917|The golden rule
+918|In a normal German sentence the verb is always the <b>second element</b>. This is the most important rule in the whole language.
+919|x
+920|Example
+921|I'm learning German today: the verb lerne is the second word
+922|x
+923|x
+924|The same sentence another way
+925|Today I'm learning German: the verb is still the second element even if the sentence starts with the time
+926|x
+927|x
+928|The question
+929|Yes/no question: the verb comes first. Question with a question word: the question word first and the verb second
+930|x
+931|x
+932|x
+933|nicht for verbs and adjectives, kein for nouns
+934|x
+935|x
+936|x
+937|A mental exercise 🧠
+938|Arrange these on your own: Deutsch / ich / lerne. Correct: Ich lerne Deutsch. The verb is always in the right place.
+939|x
