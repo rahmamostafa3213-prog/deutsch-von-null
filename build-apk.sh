@@ -1,6 +1,7 @@
 #!/bin/bash
-# Build script: Deutsch von Null APK
+# Build script: Wortgarten APK
 # Needs: JDK17 in ~/jdk17, Android SDK in ~/sdk (build-tools 34, platform android-34)
+# Signing: keystore.jks in repo root (gitignored), password in env KS_PASS
 set -e
 export JAVA_HOME=~/jdk17 PATH=~/jdk17/bin:~/sdk/build-tools/34.0.0:$PATH
 cd "$(dirname "$0")"
@@ -12,5 +13,5 @@ d8 --min-api 24 --output build/ build/obj/com/deutsch/vonnull/*.class
 cp build/app-unsigned.apk build/app-dex.apk
 (cd build && zip -q app-dex.apk classes.dex)
 zipalign -f -p 4 build/app-dex.apk build/app-aligned.apk
-apksigner sign --ks keystore.jks --ks-pass pass:deutsch123 --key-pass pass:deutsch123 --out build/Wortgarten-v2.1.apk build/app-aligned.apk
-apksigner verify build/Wortgarten-v2.1.apk && echo "BUILD OK: build/Wortgarten-v2.1.apk"
+apksigner sign --ks keystore.jks --ks-pass env:KS_PASS --key-pass env:KS_PASS --out build/Wortgarten-v2.2.apk build/app-aligned.apk
+apksigner verify build/Wortgarten-v2.2.apk && echo "BUILD OK: build/Wortgarten-v2.2.apk"

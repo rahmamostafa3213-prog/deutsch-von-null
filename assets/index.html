@@ -54,12 +54,23 @@ canvas.chart{width:100%;border-radius:14px;background:var(--card);border:1px sol
 .toolcard{display:flex;gap:12px;align-items:center;cursor:pointer}
 .toolcard .ic{font-size:26px;width:46px;height:46px;border-radius:14px;background:var(--bg);display:grid;place-items:center}
 .certwrap canvas{width:100%;border-radius:14px;border:1px solid var(--bd)}
+.recon{background:var(--bad)!important;animation:pulse 1s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.zstep p{line-height:2}
+.vslide{min-height:270px;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:28px 16px}
+.vslide .de{font-size:24px;margin:12px 0;direction:ltr}
+.vslide p{line-height:1.9;margin:8px 0}
+.dots{display:flex;gap:6px;justify-content:center;margin:4px 0 10px}
+.dots i{width:8px;height:8px;border-radius:50%;background:var(--bd)}
+.dots i.on{background:var(--pr)}
 .credit{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px}
 .rmark{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--pr),var(--pr2));color:var(--ac);font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:900;font-size:28px;line-height:1;transform:rotate(-8deg);box-shadow:0 3px 8px rgba(11,122,107,.35);text-shadow:0 1px 2px rgba(0,0,0,.3);flex-shrink:0}
 </style></head><body><div id="app"></div>
 <nav id="nav"></nav>
 <script src="data.js"></script>
 <script src="data2.js"></script>
+<script src="data3.js"></script>
+<script src="data4.js"></script>
 <script>
 const $=s=>document.querySelector(s);
 const DEF={xp:0,streak:0,last:'',done:{},srs:{},today:{d:'',xp:0},dark:false,goal:30,hist:{},wrong:{},name:'',placed:false};
@@ -68,8 +79,8 @@ const save=()=>localStorage.setItem('de_state',JSON.stringify(L));
 const day=()=>{const d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()};
 const ONE=864e5;
 if(L.dark)document.body.classList.add('dark');
-const UNITS_ALL=UNITS.concat(UNITS2);
-function speak(t){t=t.replace(/\.\.\./g,'');try{if(window.Android)Android.speak(t);else{const u=new SpeechSynthesisUtterance(t);u.lang='de-DE';u.rate=.85;speechSynthesis.cancel();speechSynthesis.speak(u)}}catch(e){}}
+const UNITS_ALL=UNITS.concat(UNITS2,UNITS3);
+function speak(t,r){t=t.replace(/\.\.\./g,'');try{if(window.Android){if(r)Android.speakRate(t,r);else Android.speak(t)}else{const u=new SpeechSynthesisUtterance(t);u.lang='de-DE';u.rate=r||.85;speechSynthesis.cancel();speechSynthesis.speak(u)}}catch(e){}}
 function addXP(n){const d=day();if(L.today.d!==d)L.today={d,xp:0};L.today.xp+=n;L.xp+=n;L.hist[d]=(L.hist[d]||0)+n;
  const ks=Object.keys(L.hist);if(ks.length>90)ks.sort().slice(0,ks.length-90).forEach(k=>delete L.hist[k]);
  if(L.last!==d){const y=new Date(Date.now()-ONE);const yd=y.getFullYear()+'-'+(y.getMonth()+1)+'-'+y.getDate();L.streak=(L.last===yd)?L.streak+1:1;L.last=d}save()}
@@ -80,7 +91,7 @@ let tab='home',stack=null;
 function nav(){$('#nav').innerHTML=[['home','🏠','الرئيسية'],['rev','🔁','مراجعة'],['talk','💬','محادثات'],['tools','📚','أدوات'],['me','👤','أنا']].map(([k,i,t])=>`<button class="${tab===k&&!stack?'on':''}" onclick="go('${k}')"><span>${i}</span>${t}</button>`).join('')}
 function go(k){tab=k;stack=null;render()}
 window.appBack=function(){if(stack){stack=null;render();return true}if(tab!=='home'){tab='home';render();return true}return false};
-function render(){nav();window.scrollTo(0,0);
+function render(){if(curAudio){try{curAudio.pause();curAudio=null}catch(e){}}nav();window.scrollTo(0,0);
  if(stack)return stack();
  ({home,rev:reviewHome,talk:talkHome,tools:toolsHome,me})[tab]()}
 function topbar(){const d=day();const t=L.today.d===d?L.today.xp:0;return `<div class="top"><span class="chip">🔥 ${L.streak} يوم</span><span class="chip">⭐ ${L.xp} نقطة</span><span class="chip">🎯 ${Math.min(t,L.goal)}/${L.goal}</span></div>`}
@@ -90,14 +101,17 @@ function sectionList(list){return list.map(u=>{const s=L.done[u.id];const ok=unl
 function home(){const dn=Object.keys(L.done).length;
  $('#app').innerHTML=topbar()+`<div class="hero"><b>أهلاً${L.name?' يا '+L.name:''}! Hallo 👋</b><div>أكملتي ${dn} من ${UNITS_ALL.length} وحدة. كمّلي بنفس الحماس.</div><div class="bar"><i style="width:${dn/UNITS_ALL.length*100}%"></i></div></div>`+
  (L.placed?'':`<div class="card unit" onclick="placement()" style="border:2px solid var(--vio)"><div class="ic">🎯</div><div class="m"><b>اختبار تحديد المستوى</b><br><small>لو عندك أساس، خدي الاختبار وافتحي الوحدات على مستواك بدل ما تبدئي من الصفر</small></div><span style="font-size:22px">▶</span></div>`)+
- `<h2>المستوى الأول A1 — الأساس</h2>`+sectionList(UNITS)+`<h2>المستوى التاني A2 — التقدم</h2>`+sectionList(UNITS2)}
+ `<div class="card unit" onclick="zeroHome()" style="border:2px solid var(--pr)"><div class="ic">🐣</div><div class="m"><b>ابدأ من الصفر</b><br><small>مسار مبسط: الحروف والأصوات بالصوت، الضمائر، وأول جمل — خطوة بخطوة</small></div><span style="font-size:22px">▶</span></div>
+ <div class="card unit" onclick="videoHome()" style="border:2px solid var(--ac)"><div class="ic">🎬</div><div class="m"><b>دروس فيديو بالصوت</b><br><small>شرح مصمم من تحت الصفر: من الحروف لحد ترتيب الجملة</small></div><span style="font-size:22px">▶</span></div>`+
+ `<h2>المستوى الأول A1 — الأساس</h2>`+sectionList(UNITS)+`<h2>المستوى التاني A2 — التقدم</h2>`+sectionList(UNITS2)+`<h2>A2 المكمل — توسّع في المفردات</h2>`+sectionList(UNITS3)}
 function openUnit(id){const u=UNITS_ALL.find(x=>x.id===id);let i=0;
  stack=()=>{const w=u.w[i];$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>${u.icon} ${u.t}</b><span class="chip">${i+1}/${u.w.length}</span></div>
  <div class="prog"><i style="width:${(i+1)/u.w.length*100}%"></i></div>
  <div class="flip" id="fl" onclick="this.classList.toggle('f')"><div><div class="face front"><span class="de">${w[0]}</span><span class="hint">اضغطي لمعرفة المعنى</span></div><div class="face back">${w[1]}</div></div></div>
- <div class="center"><button class="sp" style="font-size:40px" onclick="speak('${escQ(w[0])}')">🔊</button></div>
+ <div class="center"><button class="sp" style="font-size:40px" onclick="speak('${escQ(w[0])}')">🔊</button><button class="sp" style="font-size:30px" onclick="speak('${escQ(w[0])}',0.55)">🐢</button></div>
  <div class="row"><button class="btn2" ${i?'':'disabled'} onclick="nx(-1)">السابق</button><button class="btn" onclick="nx(1)">${i<u.w.length-1?'التالي':'ابدأ التمرين'}</button></div>
  <div class="row" style="margin-top:10px"><button class="btn2" onclick="listenUnit(${u.id})">🎧 وضع الاستماع</button><button class="btn2" onclick="matchGame(${u.id})">🧩 لعبة التوصيل</button></div>
+ <div class="row" style="margin-top:10px"><button class="btn2" onclick="pronPractice(${u.id})">🎤 تدريب النطق بالميكروفون</button></div>
  <div class="card" style="margin-top:16px"><b>💡 نصيحة</b><p style="margin:6px 0 0">${u.g}</p></div>`;setTimeout(()=>speak(w[0]),200)};
  window.nx=d=>{if(i+d>=u.w.length){return quiz(u)}i=Math.max(0,i+d);render()};render()}
 let LISTEN_STOP=false;
@@ -160,6 +174,95 @@ function quiz(u){const qs=mkQ(u,u.w.map(w=>({de:w[0],ar:w[1]})),u.p);
  stack=()=>runQ(qs,u.t,(ok,n)=>{const r=ok/n;const s=r>=.9?3:r>=.7?2:r>=.4?1:0;
   const prev=L.done[u.id];if(s>0&&(prev===undefined||s>prev))L.done[u.id]=s;addXP(ok*5+(s>=1?20:0));save();
   stack=()=>{$('#app').innerHTML=`<div class="big">${s>=2?'🎉':s?'👍':'💪'}</div><h1 class="center">${ok} من ${n}</h1><div class="center stars" style="font-size:36px">${'★'.repeat(s)+'☆'.repeat(3-s)}</div><p class="center">${s?'حصلتي على '+(ok*5+20)+' نقطة':'محتاجة 40% عالأقل عشان تعدّي. جربي تاني!'}</p><button class="btn" onclick="appBack()">رجوع للمسار</button><div style="height:8px"></div><button class="btn2" onclick="quiz(UNITS_ALL.find(x=>x.id==${u.id}))">إعادة التمرين</button>`};render()});render()}
+function normDe(s){return (s||'').toLowerCase().replace(/ß/g,'ss').replace(/ä/g,'a').replace(/ö/g,'o').replace(/ü/g,'u').replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim()}
+function levD(a,b){const m=a.length,n=b.length;if(!m)return n;if(!n)return m;const d=[];for(let i=0;i<=m;i++){d[i]=[i]}for(let j=0;j<=n;j++)d[0][j]=j;
+ for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n]}
+function simScore(t,h){const a=normDe(t),b=normDe(h);if(!a||!b)return 0;return Math.max(0,Math.round((1-levD(a,b)/Math.max(a.length,b.length))*100))}
+function micSupported(){return !!((window.Android&&Android.startListening)||window.SpeechRecognition||window.webkitSpeechRecognition)}
+let webRec=null;
+function startMic(){
+ if(window.Android&&Android.startListening){Android.startListening();return}
+ const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR)return;
+ if(!webRec){webRec=new SR();webRec.lang='de-DE';webRec.interimResults=true;webRec.maxAlternatives=3;
+  webRec.onresult=e=>{let fin='',part='';for(const r of e.results){if(r.isFinal)fin+=r[0].transcript;else part+=r[0].transcript}
+   if(fin&&window.onSpeechResult)onSpeechResult(fin);else if(part&&window.onSpeechPartial)onSpeechPartial(part)};
+  webRec.onerror=e=>{if(window.onSpeechError)onSpeechError(e.error==='not-allowed'?'perm':String(e.error))}}
+ try{webRec.start();if(window.onSpeechState)onSpeechState('listening')}catch(e){}}
+function stopMic(){try{if(window.Android&&Android.stopListening)Android.stopListening();else if(webRec)webRec.stop()}catch(e){}}
+function pronItems(unitId){const u=unitId?UNITS_ALL.find(x=>x.id===unitId):null;
+ if(u)return shuffle([...u.w.map(w=>({de:w[0],ar:w[1],w:{de:w[0],ar:w[1]}})),...u.p.map(p=>({de:p[0],ar:p[1]}))]).slice(0,8);
+ const hard=Object.keys(L.wrong).filter(x=>L.wrong[x]>0).map(x=>ALLW.find(w=>w.de===x)).filter(Boolean).map(w=>({de:w.de,ar:w.ar,w}));
+ const rest=shuffle(ALLW).filter(w=>!(L.wrong[w.de]>0)).map(w=>({de:w.de,ar:w.ar,w}));
+ return hard.concat(rest).slice(0,8)}
+function pronHome(){const st=(window.Android&&Android.voiceStatus)?Android.voiceStatus():'web';
+ stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">←</button><b>🎤 تدريب النطق</b><span></span></div>
+ ${st==='missing'?`<div class="msg bad">⚠️ مفيش صوت ألماني متسطب على الموبايل — النموذج الصوتي مش هيطلع صح. نزّليه من تبويب "أنا" ← صوت النطق الألماني.</div>`:''}
+ <div class="card"><b>إزاي بيشتغل؟</b><p style="line-height:2;margin:6px 0 0">1️⃣ اسمعي الكلمة أو الجملة من الزرار 🔊 (أو ببطء 🐢)<br>2️⃣ دوسي 🎤 وقوليها إنتي بنفسك<br>3️⃣ التطبيق يسمعك ويديك نسبة تشابه نطقك بالنموذج من 100</p></div>
+ <div class="card"><b>نصايح لدرجة أعلى</b><p style="line-height:2;margin:6px 0 0">اتكلمي بصوت واضح في مكان هادي<br>قسّمي الكلمة الطويلة لمقاطع<br>كرري ورا النموذج 2-3 مرات قبل التسجيل</p></div>
+ ${micSupported()?`<button class="btn" onclick="pronPractice(0)">ابدأ التدريب 🎤</button>`:`<div class="msg bad">تدريب النطق بيشتغل من تطبيق الموبايل بس، مش من المتصفح.</div>`}`};render()}
+function pronPractice(unitId){const items=pronItems(unitId);let i=0,sum=0,tries=0;
+ const title=unitId?UNITS_ALL.find(x=>x.id===unitId).t:'تدريب النطق';
+ const step=()=>{if(i>=items.length){const avg=tries?Math.round(sum/tries):0;addXP(Math.round(sum/25));
+  stack=()=>{$('#app').innerHTML=`<div class="big">${avg>=80?'🌟':avg>=60?'👍':'💪'}</div><h1 class="center">متوسط نطقك: ${avg}%</h1><p class="center">${avg>=80?'نطقك ممتاز! كمّلي كده 👏':avg>=60?'كويس جداً — اسمعي النموذج وكرري اللي جاب أقل من 80%':'اسمعي النموذج ببطء 🐢 ورددي وراه، وحاولي تاني'}</p><button class="btn" onclick="appBack()">تمام</button><div style="height:8px"></div><button class="btn2" onclick="pronPractice(${unitId||0})">جولة تانية</button>`};render();return}
+  pronRound(items[i],title,i,items.length,sc=>{sum+=sc;tries++;i++;step()})};
+ step()}
+function pronRound(it,title,i,n,done){let heard='',on=false;
+ const draw=fb=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">✕</button><b>🎤 ${title}</b><span class="chip">${i+1}/${n}</span></div><div class="prog"><i style="width:${i/n*100}%"></i></div>
+ <div class="card center" style="padding:26px 14px"><div class="de" style="font-size:26px;margin:8px 0">${it.de}</div><div style="color:var(--mu)">${it.ar}</div>
+ <div style="margin-top:10px"><button class="sp" style="font-size:34px" onclick="speak('${escQ(it.de)}')">🔊</button><button class="sp" style="font-size:26px" onclick="speak('${escQ(it.de)}',0.55)">🐢</button></div></div>
+ <button class="btn ${on?'recon':''}" id="micbtn" onclick="micTap()">${on?'⏹ كده كفاية':'🎤 اضغطي واتكلمي'}</button>
+ <div id="heard" class="center" style="margin-top:10px;color:var(--mu)">${heard?'بسمعك: '+heard:''}</div><div id="fb">${fb||''}</div>`};
+ const grade=text=>{on=false;heard=text;const sc=simScore(it.de,text);
+  if(it.w){srsMark(it.w,sc>=65);if(sc>=65){if(L.wrong[it.w.de])L.wrong[it.w.de]=Math.max(0,L.wrong[it.w.de]-1)}else{L.wrong[it.w.de]=(L.wrong[it.w.de]||0)+1}save()}
+  const ok=sc>=65;
+  draw(`<div class="msg ${ok?'ok':'bad'}">${sc>=85?`ممتاز! نطقك ${sc}% 🌟`:ok?`كويس! ${sc}% — سمعت: "${text}"`:`سمعت: "${text}" — اسمعي النموذج وجربي تاني`}</div><button class="btn" id="pnext">التالي</button><div style="height:8px"></div><button class="btn2" id="pgain">🔁 حاولي تاني</button>`);
+  $('#pnext').onclick=()=>done(sc);$('#pgain').onclick=()=>draw();if(sc<85)speak(it.de)};
+ window.micTap=()=>{if(on){stopMic();on=false;draw();return}
+  if(!micSupported()){draw(`<div class="msg bad">الميكروفون بيشتغل من التطبيق على الموبايل بس</div>`);return}
+  on=true;heard='';draw();
+  window.onSpeechResult=t=>{grade(t)};
+  window.onSpeechPartial=t=>{const h=$('#heard');if(h)h.textContent='بسمعك: '+t};
+  window.onSpeechState=s=>{if(s==='processing'){on=false;const b=$('#micbtn');if(b){b.classList.remove('recon');b.textContent='⏳ بقيّم نطقك...'}}};
+  window.onSpeechError=c=>{on=false;const m={perm:'محتاجة إذن الميكروفون — فعّليه من إعدادات التطبيق','7':'مسمعتش حاجة واضحة — جربي في مكان هادي وقربي الموبايل','6':'خدمة التعرف محتاجة نت أول مرة — وصّلي نت وجربي','2':'مشكلة في الشبكة — التعرف على الصوت محتاج نت على موبايلك','no-service':'خدمة التعرف على الصوت مش متاحة على الموبايل ده','5':'الميكروفون مشغول — اقفلي التطبيقات التانية وجربي'}[c]||'حصلت مشكلة في الميكروفون — جربي تاني';
+   draw(`<div class="msg bad">${m}</div>`)};
+  window.onMicPermission=g=>{if(g==='1'){startMic()}else{on=false;draw(`<div class="msg bad">من غير إذن الميكروفون مش هقدر أسمعك. فعّليه من إعدادات التطبيق وارجعي هنا.</div>`)}};
+  startMic()};
+ draw()}
+let curAudio=null;
+function zeroHome(){const dn=Object.keys(L.zero||{}).length;
+ stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">←</button><b>🐣 ابدأ من الصفر</b><span class="chip">${dn}/${ZLESSONS.length}</span></div>
+ <p style="color:var(--mu)">مسار مبسط من تحت الصفر: الحروف بالصوت، الأصوات، الضمائر، وأول جمل. كل درس شرح قصير وبعده أسئلة تثبيت.</p>
+ <div class="prog"><i style="width:${dn/ZLESSONS.length*100}%"></i></div>`+
+ ZLESSONS.map((l,k)=>`<div class="card unit" onclick="zeroLesson(${k})"><div class="ic">${l.icon}</div><div class="m"><b>${k+1}. ${l.t}</b> ${(L.zero||{})[k]?'<span class="tag">خلصتي ✅</span>':''}<br><small>${l.g}</small></div><span style="font-size:22px">▶</span></div>`).join('')};render()}
+function zeroLesson(k){const l=ZLESSONS[k];let i=0,locked=false;
+ const step=()=>{if(i>=l.steps.length){L.zero=L.zero||{};if(!L.zero[k]){L.zero[k]=1;addXP(10)}save();
+  stack=()=>{$('#app').innerHTML=`<div class="big">🎉</div><h1 class="center">خلصتي درس "${l.t}"</h1><p class="center">+10 نقاط. ${k<ZLESSONS.length-1?'الدرس الجاي مستنيكي!':'خلصتي مسار الصفر كله — إنتي جاهزة للوحدات 💪'}</p><button class="btn" onclick="${k<ZLESSONS.length-1?`zeroLesson(${k+1})`:'zeroHome()'}">${k<ZLESSONS.length-1?'الدرس التالي':'رجوع للمسار'}</button>`};render();return}
+  const s=l.steps[i];locked=false;
+  if(s.k==='info'){$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">←</button><b>${l.icon} ${l.t}</b><span class="chip">${i+1}/${l.steps.length}</span></div><div class="prog"><i style="width:${i/l.steps.length*100}%"></i></div>
+  <div class="card zstep" style="padding:22px 16px"><b style="font-size:18px">${s.h}</b><p style="margin:10px 0 0">${s.b}</p></div>
+  ${s.say?`<div class="center" style="margin:6px 0"><button class="sp" style="font-size:38px" onclick="speak('${escQ(s.say)}')">🔊</button><button class="sp" style="font-size:28px" onclick="speak('${escQ(s.say)}',0.55)">🐢</button></div>`:''}
+  <button class="btn" onclick="znext()">${i<l.steps.length-1?'فهمت، كمّلي':'النتيجة'}</button>`;
+  if(s.say)setTimeout(()=>speak(s.say),300)}
+  else{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">←</button><b>${l.icon} ${l.t}</b><span class="chip">${i+1}/${l.steps.length}</span></div><div class="prog"><i style="width:${i/l.steps.length*100}%"></i></div>
+  <div class="q">${s.q}${s.audio?` <button class="sp" style="font-size:34px" onclick="speak('${escQ(s.audio)}')">🔊</button>`:''}</div>
+  ${s.show?`<div class="de center" style="font-size:44px;margin:8px 0 16px">${s.show}</div>`:''}`+
+  s.opts.map((o,j)=>`<button class="opt" onclick="zpick(${j})">${o}</button>`).join('')+`<div id="fb"></div>`;
+  if(s.audio)setTimeout(()=>speak(s.audio),300)}};
+ window.znext=()=>{i++;step()};
+ window.zpick=j=>{if(locked)return;locked=true;const s=l.steps[i];const good=j===s.ans;
+  document.querySelectorAll('.opt').forEach((b,x)=>{if(x===s.ans)b.classList.add('ok');else if(x===j)b.classList.add('bad')});
+  $('#fb').innerHTML=`<div class="msg ${good?'ok':'bad'}">${good?'صح! ✅':'غلط ❌'} ${s.fb||''}</div><button class="btn" onclick="znext()">كمّلي</button>`};
+ stack=step;render()}
+function videoHome(){stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">←</button><b>🎬 دروس الفيديو</b><span class="chip">${VLESSONS.length} دروس</span></div>
+<p style="color:var(--mu)">فيديوهات شرح مصممة بجرافيك متحرك وتعليق صوتي: شرح بالعربي ونطق ألماني واضح، من أول الحروف لحد ترتيب الجملة. تشتغل أوفلاين بالكامل.</p>`+
+VLESSONS.map((l,k)=>{const done=L.vid&&L.vid[k];return `<div class="card unit" onclick="vlPlay(${k})"><div class="ic">${l.icon}</div><div class="m"><b>${k+1}. ${l.t}</b> ${done?'<span class="tag">اتشاف ✅</span>':''}<br><small>${l.d}</small></div><span style="font-size:22px">▶</span></div>`}).join('')};render()}
+function vlPlay(k){const l=VLESSONS[k];
+ stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">←</button><b>${l.icon} ${l.t}</b><span class="chip">🎬 ${k+1}/${VLESSONS.length}</span></div>
+ <video id="vlv" controls playsinline preload="metadata" poster="videos/vl${k}.jpg" src="videos/vl${k}.mp4" style="width:100%;border-radius:18px;background:#0b3b35"></video>
+ <p style="color:var(--mu);line-height:1.9">${l.d}. فيديو شرح مصمم بجرافيك متحرك وتعليق صوتي: شرح بالعربي ونطق ألماني — شغال أوفلاين بالكامل.</p>
+ <button class="btn" onclick="document.getElementById('vlv').play()">▶ تشغيل الفيديو</button>`;
+ const v=$('#vlv');v.onended=()=>{L.vid=L.vid||{};if(!L.vid[k]){L.vid[k]=1;addXP(15);save()}videoHome()};
+ };render()}
 function srsMark(w,good){const k=w.de;const s=L.srs[k]||{box:0,due:0};
  if(good){s.box=Math.min(5,s.box+1);s.due=Date.now()+[0,1,2,4,8,16][s.box]*ONE}else{s.box=0;s.due=Date.now()+10*60*1000}L.srs[k]=s;save()}
 function reviewHome(){const due=Object.keys(L.srs).filter(k=>L.srs[k].due<=Date.now());const tot=Object.keys(L.srs).length;
@@ -201,14 +304,17 @@ function rolePlay(k){const d=DIALOGS[k];const qs=d.lines.filter(l=>l[2]===1);let
  window.rnext=()=>{i++;step()};step()}
 function toolsHome(){const a1done=UNITS.every(u=>L.done[u.id]!==undefined),alldone=UNITS_ALL.every(u=>L.done[u.id]!==undefined);
  $('#app').innerHTML=`<h1>📚 الأدوات</h1>`+
- [['dict','🔎','القاموس','ابحثي في كل كلمات وجمل التطبيق'],
+ [['zero','🐣','ابدأ من الصفر','مسار الحروف والأصوات والأساسيات خطوة بخطوة'],
+  ['vids','🎬','دروس الفيديو','شرح بالصوت لكل نقطة من بداية اللغة'],
+  ['pron','🎤','تدريب النطق','قولي الجملة والتطبيق يسمعك ويقيّم نطقك'],
+  ['dict','🔎','القاموس','ابحثي في كل كلمات وجمل التطبيق'],
   ['conj','🧮','تصريف الأفعال','أهم الأفعال مصرفة مع أمثلة وصوت'],
   ['abc','🔤','النطق والحروف','الأبجدية والأصوات الخاصة بالألماني'],
   ['gram','📘','القواعد المبسطة','A1 و A2 بشرح مصري'],
   ['place','🎯','اختبار تحديد المستوى','افتحي الوحدات على مستواك'],
   ['cert','🏆','شهادتي',alldone?'شهادة إتمام المستويين جاهزة':a1done?'شهادة إتمام A1 جاهزة':'خلصي الوحدات وخدي شهادتك']]
  .map(([k,i,t,s])=>`<div class="card toolcard" onclick="openTool('${k}')"><div class="ic">${i}</div><div class="m" style="flex:1"><b>${t}</b><br><small style="color:var(--mu)">${s}</small></div><span style="font-size:22px">▶</span></div>`).join('')}
-function openTool(k){({dict,conj,abc,gram,place:placement,cert:certHome})[k]()}
+function openTool(k){({dict,conj,abc,gram,place:placement,cert:certHome,zero:zeroHome,vids:videoHome,pron:pronHome})[k]()}
 function dict(){let q='';
  stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>🔎 القاموس</b><span class="chip">${ALLW.length} كلمة</span></div>
  <input class="srch" id="dq" placeholder="اكتبي بالألماني أو بالعربي..." value="${q}">
@@ -228,9 +334,9 @@ function abc(){stack=()=>{$('#app').innerHTML=`<div class="top"><button class="s
 function gram(){stack=()=>{$('#app').innerHTML=`<div class="top"><button class="sp" onclick="appBack()">→</button><b>📘 القواعد المبسطة</b></div>
  <h2>الأساسيات (A1)</h2>`+GRAM.map(g=>`<div class="card"><b>${g[0]}</b><p style="margin:6px 0 0;line-height:1.8">${g[1]}</p></div>`).join('')+
  `<h2>المستوى التاني (A2)</h2>`+GRAM2.map(g=>`<div class="card"><b>${g[0]}</b><p style="margin:6px 0 0;line-height:1.8">${g[1]}</p></div>`).join('')};render()}
-function placement(){const pool=shuffle(ALLW).filter((w,k)=>k%2===0);const ws=[];for(let band=0;band<5;band++){const bandWords=shuffle(ALLW.filter(w=>w.u>band*4&&w.u<=(band+1)*4));ws.push(...bandWords.slice(0,3))}
- const qs=ws.map(w=>({type:'de2ar',w,opts:shuffle([w,...shuffle(ALLW.filter(x=>x.de!==w.de)).slice(0,3)])}));
- stack=()=>runQ(qs,'تحديد المستوى',(ok,n)=>{let upto=0;if(ok>=14)upto=16;else if(ok>=12)upto=12;else if(ok>=9)upto=8;else if(ok>=5)upto=4;
+function placement(){const ws=[];for(let band=0;band<7;band++){const bandWords=shuffle(ALLW.filter(w=>w.u>band*4&&w.u<=(band+1)*4));ws.push(...bandWords.slice(0,3))}
+ const qs=ws.filter(Boolean).map(w=>({type:'de2ar',w,opts:shuffle([w,...shuffle(ALLW.filter(x=>x.de!==w.de)).slice(0,3)])}));
+ stack=()=>runQ(qs,'تحديد المستوى',(ok,n)=>{let upto=0;if(ok>=20)upto=24;else if(ok>=17)upto=20;else if(ok>=14)upto=16;else if(ok>=11)upto=12;else if(ok>=8)upto=8;else if(ok>=5)upto=4;
   if(upto){for(let i=1;i<=upto;i++)if(L.done[i]===undefined)L.done[i]=1}
   L.placed=true;addXP(ok*4);save();
   stack=()=>{$('#app').innerHTML=`<div class="big">🎯</div><h1 class="center">${ok} من ${n}</h1><p class="center">${upto?`مستواك واضح إنه كويس! فتحنالك أول ${upto} وحدة بنجمة واحدة — ابدئي من وحدة ${upto+1} وكمّلي.`:'الأحسن تبدئي من الوحدة الأولى وتبني أساسك خطوة بخطوة. يلا بينا! 💪'}</p><button class="btn" onclick="appBack()">ابدأ التعلم</button>`};render()});render()}
@@ -270,10 +376,11 @@ function me(){const learned=Object.values(L.srs).filter(s=>s.box>=3).length;
  <div class="card"><b>الهدف اليومي (نقاط)</b><div class="row" style="margin-top:8px">${[20,30,50,80].map(g=>`<button class="${L.goal===g?'btn':'btn2'}" onclick="L.goal=${g};save();me()">${g}</button>`).join('')}</div></div>
  <div class="card"><b>اسمك (بيظهر في الشهادة)</b><div class="row" style="margin-top:8px"><input class="srch" id="nm2" style="margin:0" value="${L.name}" placeholder="اسمك"><button class="btn2" style="flex:0 0 90px" onclick="L.name=document.getElementById('nm2').value.trim();save();me()">حفظ</button></div></div>
  <div class="card"><b>الوضع الليلي</b><button class="btn2" style="margin-top:8px" onclick="L.dark=!L.dark;document.body.classList.toggle('dark');save();me()">${L.dark?'إيقاف':'تشغيل'}</button></div>
+ ${window.Android&&Android.voiceStatus?`<div class="card"><b>🔊 صوت النطق الألماني</b><p style="color:var(--mu);font-size:14px;margin:6px 0">${Android.voiceStatus()==='de'?'متسطب وشغال ✅':'مش متسطب على الموبايل ⚠️ النطق مش هيطلع صح من غيره'}</p>${Android.voiceStatus()!=='de'?`<button class="btn2" onclick="Android.openTtsSettings()">فتح إعدادات الصوت لتحميل الألماني</button>`:''}</div>`:''}
  <div class="card"><b>مصادر مجانية تكمّل بيها</b><p style="line-height:1.9;margin:6px 0 0">DW Nicos Weg (learngerman.dw.com)<br>Easy German على يوتيوب<br>Anki لمراجعة الكلمات</p></div>
  <button class="btn2" onclick="if(confirm('تمسحي كل التقدم؟')){localStorage.removeItem('de_state');location.reload()}">مسح التقدم</button>
   <div class="card credit"><span class="rmark">R</span><b style="font-size:17px">تصميم: زوجة وليد أحمد</b></div>
- <p class="center" style="color:var(--mu);font-size:13px">الإصدار 2.1 — مجاني بالكامل ويشتغل بدون إنترنت</p>`;
+ <p class="center" style="color:var(--mu);font-size:13px">الإصدار 2.2 — مجاني بالكامل ويشتغل بدون إنترنت</p>`;
  const c=$('#wk').getContext('2d');c.clearRect(0,0,640,220);const days=[];for(let k=6;k>=0;k--){const d=new Date(Date.now()-k*ONE);const key=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();days.push({k,v:L.hist[key]||0,l:['أحد','اتنين','تلاتا','أربع','خميس','جمعه','سبت'][d.getDay()]})}
  const mx=Math.max(20,...days.map(d=>d.v));const bw=52,gap=(640-7*bw)/8;
  days.forEach((d,k)=>{const h=d.v/mx*140;const x=gap+k*(bw+gap),y=180-h;
@@ -285,5 +392,5 @@ render();
 const qp=new URLSearchParams(location.search);
 if(qp.get('demo')){Object.assign(L,{xp:1240,streak:12,goal:30,name:'سارة',placed:true,done:{1:3,2:3,3:2,4:2,5:1,6:1},hist:{}});const d=new Date();for(let k=6;k>=0;k--){const x=new Date(Date.now()-k*ONE);const key=x.getFullYear()+'-'+(x.getMonth()+1)+'-'+x.getDate();L.hist[key]=[40,25,60,30,45,20,55][6-k]}L.srs={'Hallo':{box:3,due:0},'Danke':{box:2,due:0},'eins':{box:1,due:0}};L.wrong={'Tschüss':2};render()}
 if(qp.get('shot')){const s=qp.get('shot');
- if(s==='unit')openUnit(1);else if(s==='quiz')quiz(UNITS[0]);else if(s==='talk')openDlg(1);else if(s==='dict'){tab='tools';dict()}else if(s==='conj'){tab='tools';conj()}else if(s==='me'){tab='me';render()}else if(s==='rev'){tab='rev';render()}else if(s==='cert'){Object.keys(L.done);for(let i=1;i<=12;i++)L.done[i]=L.done[i]||2;showCert('A1')}}
+ if(s==='unit')openUnit(1);else if(s==='quiz')quiz(UNITS[0]);else if(s==='talk')openDlg(1);else if(s==='dict'){tab='tools';dict()}else if(s==='conj'){tab='tools';conj()}else if(s==='me'){tab='me';render()}else if(s==='rev'){tab='rev';render()}else if(s==='speak')pronPractice(1);else if(s==='pron'){tab='tools';pronHome()}else if(s==='zero')zeroLesson(0);else if(s==='zh')zeroHome();else if(s==='video')vlPlay(0);else if(s==='vh')videoHome();else if(s==='tools'){tab='tools';render()}else if(s==='cert'){Object.keys(L.done);for(let i=1;i<=12;i++)L.done[i]=L.done[i]||2;showCert('A1')}}
 </script></body></html>
